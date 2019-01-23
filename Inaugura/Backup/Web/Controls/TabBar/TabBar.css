@@ -1,0 +1,306 @@
+.TabBar
+{
+	background-color: #BBBBBB;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.ReportSelectorTab
+{
+	text-align: center;
+	font-family: Tahoma;
+	text-decoration: none;
+	color: #333333;
+	font-size: 11px;
+	height: 25px;
+	background-color:#FFFF40; /* #FEFFCB;#EEEEEE;*/
+	text-align: center;
+	border-color: #B5B5B5;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-width: 1px;
+	border-bottom-color: #C5C5C5;
+	border-bottom-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+}
+
+.ReportSelectorTabMouseOver
+{
+	cursor: hand;
+	cursor: pointer;
+	text-align: center;
+	font-family: Tahoma;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 11px;
+	background-color: #993300;
+	height: 25px;
+	text-align: center;
+	border-color: #333333;
+	border-left-color: #993300;
+	border-left-width: 1px;
+	border-right-color: #333333;
+	border-right-width: 1px;
+	border-top-color: #333333;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+}
+
+.ReportSelectorTabSelected
+{
+	text-align: center;
+	font-family: Tahoma;
+	text-decoration: none;
+	color: #333333;
+	font-size: 11px;
+	background-color: #F5F5F5;
+	height: 25px;
+	text-align: center;
+	border-color: #C5C5C5;
+	border-left-color: #B5B5B5;
+	border-right-color: #C5C5C5;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-width: 1px;
+	border-bottom-color: #F5F5F5;
+	border-bottom-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+}
+
+.ReportSelectorTabDisabled
+{
+	text-align: center;
+	font-family: Tahoma;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 110px;
+	background-color: #E5E5E5;
+	height: 25px;
+	text-align: center;
+	border-color: #C5C5C5;
+	border-left-color: #B5B5B5;
+	border-right-color: #B5B5B5;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+}
+
+/***********************************************************/
+
+.ReportTab
+{
+	text-align: center;
+	font-family: Tahoma;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 11px;
+	height: 25px;
+	background-color: #C5C5C5;
+	text-align: center;
+	border-color: #B5B5B5;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-width: 1px;
+	border-bottom-color: #C5C5C5;
+	border-bottom-width: 1px;
+	border-style: solid;
+	font-weight: normal;
+}
+
+.ReportTabMouseOver
+{
+	cursor: hand;
+	cursor: pointer;
+	text-align: center;
+	font-family: Tahoma;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 11px;
+	background-color: #993300;
+	height: 25px;
+	text-align: center;
+	border-color: #333333;
+	border-left-color: #993300;
+	border-left-width: 1px;
+	border-right-color: #333333;
+	border-right-width: 1px;
+	border-top-color: #333333;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-style: solid;
+	font-weight: normal;
+}
+
+.ReportTabSelected
+{
+	text-align: center;
+	font-family: Tahoma;
+	text-decoration: none;
+	color: #333333;
+	font-size: 11px;
+	background-color: #F5F5F5;
+	height: 25px;
+	text-align: center;
+	border-color: #C5C5C5;
+	border-left-color: #B5B5B5;
+	border-right-color: #C5C5C5;
+	border-left-width: 0px;
+	border-right-width: 1px;
+	border-top-width: 1px;
+	border-bottom-color: #F5F5F5;
+	border-bottom-width: 1px;
+	border-style: solid;
+	font-weight: normal;
+}
+
+.ReportTabDisabled
+{
+	text-align: center;
+	font-family: Tahoma;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 11px;
+	background-color: #E5E5E5;
+	height: 25px;
+	text-align: center;
+	border-color: #C5C5C5;
+	border-left-color: #B5B5B5;
+	border-right-color: #B5B5B5;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-style: solid;
+	font-weight: normal;
+}
+
+
+/***********************************************************/
+
+.HeadingTab
+{
+	text-align: center;
+	font-family: Tahoma;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 9px;
+	height: 23px;
+	background-color: #C5C5C5;
+	text-align: center;
+	border-color: #B5B5B5;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-width: 1px;
+	border-bottom-color: #C5C5C5;
+	border-bottom-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+}
+
+.HeadingTabMouseOver
+{
+	cursor: hand;
+	cursor: pointer;
+	text-align: center;
+	font-family: Tahoma;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 10px;
+	background-color: #993300;
+	height: 23px;
+	text-align: center;
+	border-color: #333333;
+	border-left-color: #993300;
+	border-left-width: 1px;
+	border-right-color: #333333;
+	border-right-width: 1px;
+	border-top-color: #333333;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+}
+
+.HeadingTabSelected
+{
+	text-align: center;
+	font-family: Tahoma;
+	text-decoration: none;
+	color: #333333;
+	font-size: 10px;
+	background-color: #F5F5F5;
+	height: 23px;
+	text-align: center;
+	border-color: #C5C5C5;
+	border-left-color: #B5B5B5;
+	border-right-color: #C5C5C5;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-width: 1px;
+	border-bottom-color: #F5F5F5;
+	border-bottom-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+}
+
+.HeadingTabDisabled
+{
+	text-align: center;
+	font-family: Tahoma;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 9px;
+	background-color: #E5E5E5;
+	height: 23px;
+	text-align: center;
+	border-color: #C5C5C5;
+	border-left-color: #B5B5B5;
+	border-right-color: #B5B5B5;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

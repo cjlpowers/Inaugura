@@ -1,0 +1,258 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+
+/// <summary>
+/// Summary description for CachedSearch
+/// </summary>
+public class CachedSearch
+{    
+    #region Variables
+    private string mKey;
+    private Inaugura.RealLeads.ListingSearch mSearch;
+    private int mCacheStartIndex;
+    private System.Collections.Generic.List<Inaugura.RealLeads.Listing> mCache;
+    private const int CacheSize = 20;
+    public int mSearchStartIndex;
+    public int mSearchEndIndex;    
+    #endregion
+
+    #region Properties
+    /// <summary>
+    /// The key
+    /// </summary>
+    public string Key
+    {
+        get
+        {
+            return this.mKey;
+        }
+        private set
+        {
+            this.mKey = value;
+        }
+    }
+
+    /// <summary>
+    /// The search object
+    /// </summary>
+    public Inaugura.RealLeads.ListingSearch Search
+    {
+        get
+        {
+            return this.mSearch;
+        }
+        private set
+        {
+            this.mSearch = value;
+        }
+    }
+
+    /// <summary>
+    /// The starting index of cached items
+    /// </summary>
+    private int CacheStartIndex
+    {
+        get
+        {
+            return this.mCacheStartIndex;
+        }
+        set
+        {
+            this.mCacheStartIndex = value;
+        }
+    }
+
+    /// <summary>
+    /// The ending index of cached items
+    /// </summary>
+    private int CacheEndIndex
+    {
+        get
+        {
+            return this.mCacheStartIndex + this.mCache.Count-1;
+        }
+    }
+    
+    /// <summary>
+    /// The Search start index
+    /// </summary>
+    private int SearchStartIndex
+    {
+        get
+        {
+            return this.mSearchStartIndex;
+        }
+        set
+        {
+            this.mSearchStartIndex = value;
+        }
+    }
+    
+    /// <summary>
+    /// The Search end index
+    /// </summary>
+    private int SearchEndIndex
+    {
+        get
+        {
+            return this.mSearchEndIndex;
+        }
+        set
+        {
+            this.mSearchEndIndex = value;
+        }
+    }
+
+    /// <summary>
+    /// The cached results
+    /// </summary>
+    public Inaugura.RealLeads.Listing[] CachedResults
+    {
+        get
+        {
+            return this.mCache.ToArray();
+        }
+    }
+    #endregion
+
+    #region Methods
+    /// <summary>
+    /// Constructor
+    /// </summary>
+    /// <param name="search">The search object</param>
+    public CachedSearch(Inaugura.RealLeads.ListingSearch search)
+    {
+        this.Search = search;
+        this.Key = Guid.NewGuid().ToString();
+        this.mCache = new System.Collections.Generic.List<Inaugura.RealLeads.Listing>(CachedSearch.CacheSize);
+        this.SearchStartIndex = -1;
+        this.SearchEndIndex = -1;
+    }
+
+    /// <summary>
+    /// Gets the results of the search
+    /// </summary>
+    /// <param name="startIndex">The start index</param>
+    /// <param name="endIndex">The end index</param>
+    /// <returns>The list of results</returns>
+    public Inaugura.RealLeads.Listing[] GetResults(int startIndex, int endIndex)
+    {
+        if (startIndex > endIndex || startIndex < 0)
+            throw new ArgumentOutOfRangeException();
+
+        System.Collections.Generic.List<Inaugura.RealLeads.Listing> results = new System.Collections.Generic.List<Inaugura.RealLeads.Listing>((endIndex - startIndex) < 0 ? 1 : endIndex - startIndex);
+
+        if ( this.SearchStartIndex != -1 && startIndex >= this.SearchStartIndex && endIndex <= this.SearchEndIndex) // case 1 : inside
+        {
+            results.AddRange(this.GetCachedResults(startIndex, endIndex));
+            return results.ToArray();
+        }
+        else if (endIndex < this.SearchStartIndex || startIndex > this.SearchEndIndex) // case 2: outside
+        {
+            // need to get a new result set
+            this.SearchStartIndex = startIndex - startIndex % CachedSearch.CacheSize+1;
+            this.SearchEndIndex = this.SearchStartIndex + CachedSearch.CacheSize - 1;
+
+            this.mCache.Clear();
+            
+            // fill the cache            
+            this.Search.StartIndex = this.SearchStartIndex;
+            this.Search.EndIndex = this.SearchEndIndex;
+            Inaugura.RealLeads.Listing[] resultSet = Helper.API.ListingManager.SearchListings(this.Search);
+            if (resultSet.Length == 0)
+                return resultSet;
+
+            // the result set has results so cache it
+            this.mCache.AddRange(resultSet);
+            this.CacheStartIndex = this.SearchStartIndex;
+
+            // no more results
+            if (this.mCache.Count - 1 <= this.SearchEndIndex - this.SearchStartIndex)
+                return this.GetCachedResults(startIndex, endIndex);
+            
+            // we still need more results
+            return this.GetResults(startIndex, endIndex);
+        }
+        else // case 3: on edge
+        {
+            // get the items contained in this result set
+            if (startIndex < this.mCacheStartIndex) // overlapping start
+            {
+                Inaugura.RealLeads.Listing[] tempResults = this.GetCachedResults(this.mCacheStartIndex, endIndex);
+                // get the rest of the result set
+                results.AddRange(this.GetResults(startIndex, this.mCacheStartIndex - 1));
+                results.AddRange(tempResults);
+                return results.ToArray();
+            }
+            else // overlapping end
+            {
+                if (startIndex < this.CacheEndIndex)
+                {
+                    results.AddRange(this.GetCachedResults(startIndex, this.CacheEndIndex));
+                    results.AddRange(this.GetResults(this.CacheEndIndex + 1, endIndex));
+                }
+                return results.ToArray();
+            }
+        }
+    }
+
+    /// <summary>
+    /// Gets a result
+    /// </summary>
+    /// <param name="id">The id of the listing</param>
+    /// <returns>The listing specified by the id, otherwise null</returns>
+    public Inaugura.RealLeads.Listing GetResut(Guid id)
+    {
+        foreach (Inaugura.RealLeads.Listing listing in this.mCache)
+        {
+            if (listing.ID == id)
+                return listing;
+        }
+        return null;
+    }
+
+    /// <summary>
+    /// Updates a resut
+    /// </summary>
+    /// <param name="listing">The listing</param>
+    public void UpdateResult(Inaugura.RealLeads.Listing listing)
+    {
+        lock (this.mCache)
+        {
+            for (int i = 0; i < this.mCache.Count; i++)
+            {
+                Inaugura.RealLeads.Listing l = this.mCache[i];
+                if (l.ID == listing.ID)
+                {
+                    this.mCache.RemoveAt(i);
+                    this.mCache.Insert(i, listing);
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Gets cached results 
+    /// </summary>
+    /// <param name="startIndex">The start index</param>
+    /// <param name="endIndex">The end index</param>
+    /// <returns>The search results</returns>
+    private Inaugura.RealLeads.Listing[] GetCachedResults(int startIndex, int endIndex)
+    {
+        int actualIndexStart = startIndex - this.CacheStartIndex;
+        int actualIndexEnd = endIndex - this.CacheStartIndex;
+        System.Collections.Generic.List<Inaugura.RealLeads.Listing> results = new System.Collections.Generic.List<Inaugura.RealLeads.Listing>(endIndex - startIndex);
+
+        for (int i = actualIndexStart; i <= actualIndexEnd && i < this.mCache.Count; i++)
+            results.Add(this.mCache[i]);
+        return results.ToArray();
+    }
+    #endregion
+}

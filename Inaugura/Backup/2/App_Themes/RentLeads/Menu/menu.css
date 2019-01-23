@@ -1,0 +1,130 @@
+.SKMMenuGroup
+{
+	cursor: pointer;
+	cursor: hand;		
+}
+
+.SKMMainItem, .SKMMainItemOver
+{
+		font-size:12px;
+		height:29px;
+		cursor:pointer;
+		font-weight:bold;
+}
+
+
+.SKMMainItem 
+{	
+	color: #777777;
+	width: 146px;
+	text-align:center;	
+	background-image:url(Images/pagebg.gif);
+}
+.SKMMainItemOver
+{
+	color: #569C18;
+	width: 146px;
+	text-align:center;
+	background-image:url(Images/pagebg.gif);
+}
+
+.SKMMenuItem, .SKMMenuItemOver
+{
+		font-size:11px;
+		font-weight:bold;
+		margin: 0px 0px 0px 0px;
+		padding: 0px 0px 0px 0px;		
+		height:27px;
+		cursor:pointer;
+		vertical-align:middle;
+		text-align:center;
+		background-repeat:no-repeat;
+		width: 146px;
+		background-image:url(Images/subMenu.gif);
+}
+
+
+.SKMMenuItem
+{	
+	color:#777777;
+}
+
+.SKMMenuItemOver
+{
+	color: #569C18;
+}
+.SKMMainSeparator
+{	
+	margin: 0px 0px 0px 0px;
+	width:3px;
+	background-image:url(Images/mainSeparator.gif);	
+}
+
+.SKMDropSeperator
+{	
+	margin: 0px 0px 0px 0px;
+	width:146px;
+	height:2px;
+	background-image:url(Images/separator.gif);
+	background-repeat:no-repeat;	
+}
+
+.SKMPartnerSpacer
+{	
+	background-color:Transparent;
+	margin: 0px 0px 0px 0px;
+	width:146px;
+	height:13px;
+	background-image:url(Images/partnerSpacer.gif);
+	background-repeat:no-repeat;
+}
+
+.SKMBottomEdge
+{	
+	background-color:Transparent;
+	margin: 0px 0px 0px 0px;
+	width:146px;
+	height:14px;
+	background-image:url(Images/footer.gif);
+	background-repeat:no-repeat;
+}
+
+.SKMMainLeftEdge
+{
+    background-image:url(Images/LeftEdge.gif);
+    width:7px;
+	height:29px;
+	border:0;
+	padding-top:0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.SKMMainRightEdge
+{
+    background-image:url(Images/RightEdge.gif);
+    width:7px;
+	height:29px;
+	border:0;
+	padding-top:0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.SKMMainFillerRight
+{
+    width:154px;
+	background-image:url(Images/pagebg.gif);
+	background-repeat:repeat-x;
+}
+
+.SKMMainFillerLeft
+{
+	margin-left:15px;	
+	width:5px;
+	background-image:url(Images/pagebg.gif);
+	background-repeat:repeat-x;
+}
+
+.SKMSeparator
+{
+	border-right: 2px solid #C5C5C5;
+}

@@ -1,0 +1,128 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC3BBC43-801D-4FED-B3E6-BDFB9E37E19F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OrbisSwitch</RootNamespace>
+    <AssemblyName>OrbisSwitch</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Inaugura.Dialogic, Version=1.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Inaugura.Dialogic\Release\Inaugura.Dialogic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExceptionDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrbisSwitchDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ExceptionDlg.resx">
+      <DependentUpon>ExceptionDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrbisSwitchDlg.resx">
+      <DependentUpon>OrbisSwitchDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashDlg.resx">
+      <DependentUpon>SplashDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Switch.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ServiceLineTreeNode.cs" />
+    <Compile Include="ServiceManagerTreeNode.cs" />
+    <Compile Include="ServiceTreeNode.cs" />
+    <Compile Include="SplashDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusTreeNode.cs" />
+    <Compile Include="TelephonyHardwareTreeNode.cs" />
+    <Compile Include="TelephonyLineTreeNode.cs" />
+    <Compile Include="TelephonyManagerTreeNode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Switch.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inaugura.RealLeads\Inaugura.RealLeads.csproj">
+      <Project>{BFED6F5B-2F66-4FE0-B727-EFF461DE0261}</Project>
+      <Name>Inaugura.RealLeads</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inaugura.Telephony.Dialogic\Inaugura.Telephony.Dialogic.csproj">
+      <Project>{6E548754-E07C-4849-A7EA-F57FA271479C}</Project>
+      <Name>Inaugura.Telephony.Dialogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inaugura.Telephony\Inaugura.Telephony.csproj">
+      <Project>{6B2C75CA-42CA-44F7-8A6F-FFA589E307FC}</Project>
+      <Name>Inaugura.Telephony</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inaugura\Inaugura.csproj">
+      <Project>{7868A321-48B1-4854-A365-3DB5BE40F75E}</Project>
+      <Name>Inaugura</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OrbisTel.Services.MyShield\OrbisTel.Services.MyShield.csproj">
+      <Project>{7BF29907-E62F-4C8E-8B88-A1F13F1F8A85}</Project>
+      <Name>OrbisTel.Services.MyShield</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

@@ -1,0 +1,1010 @@
+﻿
+#pagebody.photos #content,
+#pagebody.album #content,
+#pagebody.photo #content,
+#pagebody.editalbum #content,
+#pagebody.photoselect #content {
+  position: relative;
+  margin: 0px;
+  padding: 0px; }
+
+#pagebody.photo_comments #content { 
+  position: relative;
+  margin: 0px;
+  padding: 0px 10px; }
+
+#pagebody.editalbum #content,
+#pagebody.editphotos #content,
+#pagebody.photoselect #content {
+  padding: 12px 0px 0px;
+  position: static; }
+
+#pagebody.editphotos #invite_jump_content {
+  padding: 0px 0px 0px;
+  position: static; }
+
+#pagebody.newalbum #content {
+  padding: 0px; }
+#pagebody.newalbum .formbuttons {
+  padding: 5px 0px 5px 215px;
+  text-align: left; }
+#pagebody.newalbum .formbuttons input { margin: 0px; }
+
+#pagebody.editsinglephoto #content {
+  padding: 0px;
+  position: static; }
+
+#pagebody.photo #content { position: static; }
+
+#pagebody.nophotos #content { padding-top: 20px; }
+
+#pagebody.photoprint #content {
+  position: static;
+  margin: 0px;
+  padding: 0px;
+}
+
+#nophotos {
+  font-size: 12px;
+  line-height: 17px;
+  text-align: center;
+  margin: 0px 20px 10px 20px;
+  padding: 50px 10px;
+  color: #999;
+  background: #f7f7f7;
+  border: solid 1px #ddd; }
+
+/* Album Covers */
+
+#albumcovers {
+  padding: 10px 10px 5px;
+  background: #f7f7f7;
+  border-bottom: solid 1px #D8DFEA; }
+  
+  * html #albumcovers { padding: 10px; }
+  
+  #albumcovers #bottompager { margin-bottom: -1px; }
+
+#albumcovers table {
+  margin: 0px 0px 5px;
+  background: white;
+  border: solid 1px #ccc; }
+
+#albumcovers td {
+  vertical-align: top;
+  padding: 5px; }
+  
+  #albumcovers td.image {
+    width: 180px;
+    padding-right: 10px; }
+
+  #albumcovers td.info {
+    padding-right: 20px; }
+  
+  #albumcovers .count {
+    font-weight: normal;
+    color: gray; }
+  
+  #albumcovers .visible {
+    font-weight: bold;
+    color: black;
+    font-size: 11px; }
+    
+#albumcovers h5 {
+  margin: 5px 0px 2px;
+  font-size: 12px; }
+
+#albumcovers p {
+  margin: 5px 0px 5px; }
+
+#albumcovers .date {
+  color: gray; }
+
+#albumsfooter {
+  text-align: left;
+  margin: 0px 0px 0px;
+  padding: 3px 10px; }
+
+#albumsupdatefooter {
+  text-align: left;
+  margin: 0px 0px 0px;
+  padding: 3px 10px; }
+  
+* html #albumsupdatefooter {
+  text-align: left;
+  margin: -5px 0px 0px;
+  padding: 3px 10px 3px}
+
+#albumsupdatemessage {
+  float: left; 
+  padding-bottom: 3px; }
+
+h4 {
+  border-bottom: solid 1px #D8DFEA;
+  text-align: left;
+  padding: 0px 0px 4px 0px;
+  margin: 0px; }
+
+#friendsphotos {
+  float: left;
+  width: 360px;
+  padding: 10px 10px 10px 10px;
+  text-align: right; }
+
+#friendsphotos h4 span {
+  float: left; 
+  width: 300px; }
+
+#friendsphotos h4 a {
+  float: right;
+  font-weight: normal; }
+  
+#friendsphotosonly {
+  margin: 0px 0px 0px 0px;
+  padding: 10px 10px 10px 10px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+#friendalbumrow {
+  margin: 0px 0px 5px 0px;
+  padding: 0px 0px 10px 5px;
+  background: white;
+  border: solid 1px #CCCCCC;
+}
+
+  .friendalbum {
+    width: 280px;
+    padding-top: 10px;
+    text-align: left; }
+
+    .friendalbum0 { /* first column friends only cell */
+      float: left;
+      /* border: 2px solid blue; */
+    }
+
+    .friendalbum1 { /* second column friends only cell */
+      float: right;
+      clear: right;
+      /* border: 2px solid red; */
+    }
+  
+  .friendalbum img {
+    width: 75px;
+    float: left;
+    margin-right: 10px; }
+  .friendalbum .author a:hover {
+    color: #3B5998; }
+  
+  .friendalbum .date {
+    color: gray; }
+  
+#createalbum {
+  float: left;
+  width: 200px;
+  padding: 10px 10px;
+  text-align: left; }
+
+#sharefooter {
+  background: #f7f7f7;
+  border-top: solid 1px #D8DFEA;
+  text-align: left;
+  margin: 0px 0px 0px;
+  padding: 3px 10px; }
+
+/* Album */
+
+#albumsubheader {
+  text-align: left;
+  color: black;
+  font-size: 11px;
+  margin: 0px;
+  padding: 15px 10px 4px;
+  background: white;
+  border-bottom: solid 1px #D8DFEA; }
+  
+  #albumsubheader.withpager {
+    text-align: right; }
+  #albumsubheader.withpager div.menu {
+    float: left; }
+
+#album {
+  margin: 0px;
+  padding: 10px;
+  background: #f7f7f7;
+  border-bottom: solid 1px #D8DFEA; }
+
+#album td {
+  width: 150px;
+  padding: 3px 2px;
+  text-align: center;
+  vertical-align: middle; }
+
+#album img {
+  background: white;
+  padding: 6px;
+  border: solid 1px #ccc; }
+
+#album img:hover {
+  border: solid 1px #3B5998; }
+  
+ .testphoto{
+  background: white;
+  padding: 6px;
+  border: solid 1px #ccc; }
+
+.testphoto:hover {
+  border: solid 1px #3B5998; }
+
+.album .footer {
+  padding: 3px 10px; }
+
+.album .footer .info {
+  float: left; 
+  padding: 5px 0px;
+  width: 400px; }
+
+.album .footer .description,
+.album .footer .location,
+.album .footer .album_tags {
+  float: left; 
+  padding: 0px 0px 8px; 
+  width: 400px; }
+  
+.album .footer .footer_nav {
+  float: right; 
+  width: 200px;
+  display: block;}
+  
+  .album .footer .pager {
+    clear: right; 
+    float: right;
+    padding-bottom: 4px; }
+
+  .album .footer .share_and_hide {
+    padding: 6px 0px 0px;
+    clear: right;
+    float: right; }
+  
+  .album .mobile_notice {
+    float: left; 
+    width: 365px;
+    border-top: solid #ccc 1px;
+    padding: 5px 0px; }
+  
+.sharelink {
+  text-align: center;
+  background: white;
+  border: solid 1px #D8DFEA;
+  padding: 5px;
+  margin: 5px 0px; }
+
+
+/* Photo */
+
+#subheader .photonav {
+  font-weight: normal; }
+
+  #subheader .photonav a {
+    display: inline;
+    padding: 3px 3px; }
+  #subheader .photonav a:hover {
+    text-decoration: none;
+    background: #3B5998;
+    color: white; }
+  
+  #subheader .text {
+    font-weight: normal;
+    color: black; }
+  
+  #pagebody.photo #subheader h2 a {
+    font-weight: normal; }
+
+#photoborder {
+  padding: 0 0 10px 0;
+  background: #f7f7f7;
+  text-align: center; 
+  border-top: solid 1px #f7f7f7; 
+  border-bottom: solid 1px #D8DFEA; }
+  
+  #photoborder img {
+    border: solid 1px #ddd;
+    margin: 10px 10px 10px;
+    background: white; }
+
+  #photoborder img {
+    cursor: pointer; 
+    cursor: hand; 
+  }
+
+#photoinfo {
+  width: 606px;
+  margin: 4px 10px 4px;
+  /* float: left; */ }
+
+  * html #photoinfo { width: 606px; }
+
+#photocaption {
+  text-align: left;
+  width: 390px;
+  margin: 0px;
+  line-height: 15px;
+  padding: 0px 11px 8px; }
+  
+  #photocaptionleft { width: 606px; text-align: left; }
+
+#photodate {
+    margin: 0px;
+    padding: 4px 11px 8px;
+    float: left;
+    color: #777;
+}
+
+/* width added so the uploaded photodate stacks left nicely */
+.share_and_hide {
+    float: left; width: 58px; }
+
+#photoinalbum {
+  float: right;
+  width: 170px;
+  padding-left: 10px;
+  border-left: solid 1px #ccc;
+  line-height: 15px; }
+
+#changessaved { 
+  padding: 10px 0px 0px;
+  margin: 0px;
+  background: #f7f7f7; }
+
+  #changessaved .status { 
+    margin-bottom: 0px; }
+
+#phototags {
+  text-align: left;
+  width: 390px;
+  line-height: 15px;
+  margin: 0px;
+  padding: 0px 11px 8px; }
+
+#phototags .darklink {
+  color: #555;
+}
+
+  
+#photocaptionleft .share_and_hide {
+  padding: 2px 0px 3px 11px; }
+  
+  #tagframe {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 170px;
+    width: 170px;
+    border: solid 7px #D8DFEA; }
+    
+    #tagframeinside {
+      display: block;
+      position: absolute;
+      cursor: crosshair;
+      top: 0px;
+      left: 0px;
+      width: 166px;
+      height: 166px;
+      border: solid 2px #3B5998; }
+
+#photocommentshow {
+  float: left;
+  clear: left;
+  margin-bottom: 10px; }
+
+#photocomment {
+  float: left;
+  width: 400px; }
+
+#photocomment .actions a small {
+  color: #3b5998; }
+
+#photocomment .actions a:hover {
+  text-decoration: underline; }
+
+#photoaddcomment {
+  float: left;
+  clear: left;
+  margin: 10px 0px; }
+  
+  #photoaddcomment h4 {
+    border: none; }
+
+ #photoactions {
+  float: right;
+  width: 150px;
+  margin: 3px 0px; }
+  
+  #photoactions a, #photoactions .action_link, #photoactions .non_action {
+    display: block;
+    clear: both;
+    padding: 2px 3px;
+    border-bottom: solid 1px #D8DFEA; }
+
+  #photoactions a:hover, #photoactions .action_link:hover {
+    text-decoration: none;
+    background: #3B5998;
+    color: white; }
+
+  #photoactions .non_action {
+    margin-top: 0px;
+    border-bottom: none; 
+    color: #666666;
+ }
+
+   #photoactions .non_action:hover {
+    text-decoration:none;
+    background: transparent;
+    color: #666666;
+ }
+
+
+#rotateleft, #rotateright {
+  width: 75px;
+  float: left;
+  border-bottom: solid 1px #D8DFEA; }
+
+  #rotateleft {
+    background: white url(../images/rotateleft.gif) no-repeat 46px 2px; }
+  #rotateleft:hover {
+    background: #3B5998 url(../images/rotatelefthover.gif) no-repeat 46px 2px; }
+  #rotateright {
+    background: white url(../images/rotateright.gif) no-repeat 3px 2px; }
+  #rotateright:hover {
+    background: #3B5998 url(../images/rotaterighthover.gif) no-repeat 3px 2px; }
+  #rotateright a {
+    padding-left: 33px; }
+
+#rotateleft a, #rotateright a {
+  clear: none;
+  border: none;
+  background: none; }
+#rotateleft a:hover, #rotateright a:hover {
+  text-decoration: none;
+  color: white;
+  background: none; }
+
+/* Convert Mobile Album */
+#convertmobile { 
+ text-align:center;
+ padding: 10px 10px 0px; }
+
+#convertmobile h4 { 
+ text-align:center; }
+
+#convertmobile p { 
+ font-size: 11px;
+ text-align:center; }
+
+.movephoto select { 
+ width: 117px; }
+
+/* New Album */
+
+.newalbum #newalbum {
+  background: #f7f7f7;
+  padding: 20px 0px 10px 0px; }
+
+#newalbum .inputtext, #newalbum textarea {
+  width: 250px; }
+
+#newalbum .inputsubmit, #newalbum .inputbutton {
+  width: auto; }
+
+#files div {
+  margin: 5px 0px 8px 0px;
+}
+
+#files input {
+  width: 200px; }
+
+#morefiles {
+  margin-top: 15px; }
+  
+#uploading {
+  margin: 20px auto;
+  /* this is an empty line */
+  width: 400px; }
+
+#noactive {   
+  margin: 15px 0px 0px 0px;    
+  text-align: center; }  
+
+#mobile_suggestion {   
+  margin: 4px 0px 20px 0px;    
+  text-align: center; }  
+  
+#photodisclaimer {
+  margin: 5px 0px 15px 0px;
+  text-align: center; }
+
+#photoagree {
+  text-align: left;
+  margin: 10px 0px 15px 0px;
+  width: 300px; }
+#photoagree input {
+  width: auto; }
+small {
+  color: #666666; }
+  
+/* Edit Photo */
+
+#editphoto {
+  width: 540px;
+  margin: 20px auto; }
+
+#editphoto .photo {
+  width: 540px;
+  margin: 0px auto 15px;
+  padding: 0px 0px 15px;
+  border-bottom: solid 1px #3B5998; }
+  
+  #editphoto .last {
+    border-bottom: none; }
+
+#editphoto .photo .thumb {
+  float: left;
+  margin-left: 10px;
+  width: 180px; }
+
+#editphoto .photo .info {
+  float: left;
+  margin: 0px 10px; }
+
+#editphoto .photo .info label {
+  clear: right;
+  display: block;
+  margin-bottom: 2px; }
+
+#editphotoalbum {
+  padding: 10px 0px 5px;
+  background: #f7f7f7;
+  border-bottom: solid 1px #D8DFEA; }
+  
+  * html #editphotoalbum { padding: 10px 0 10px; }
+
+#editphotoalbum .emails_error {
+  border: solid 1px #dd3c10;
+  background: #ffebe8;
+  padding: 10px;
+  margin: 10px;
+  width: 580px;
+}
+
+#editphotoalbum .emails_success {
+  border: solid 1px #ffe222;
+  background: #fffbe2;
+  padding: 10px;
+  margin: 10px;
+  width: 580px;
+}
+  
+#editphotoalbum .photo {
+  margin: 0px 10px 5px;
+  padding: 10px;
+  background: white;
+  border: solid 1px #D8DFEA; }
+  
+  /* * html .photo { margin: 100px; } */
+    
+  #editphotoalbum img {
+    cursor: crosshair; }
+
+  #editphotoalbum .photo .thumb {
+    float: right;
+    width: 180px; }
+  
+  #editphotoalbum .photo .thumb .covercheck {
+    background: #f7f7f7;
+    border: solid 1px #ccc;
+    padding: 1px 1px 1px;
+    text-align: left; }
+    
+  #editphotoalbum .covercheck label {
+    display: inline;
+    margin: 0px 0px 0px 0px;
+    color: #000000;
+    font-weight: normal;
+  }
+    
+  #editphotoalbum .photo .thumb .noradio {
+    padding: 3px; }
+  
+  #editphotoalbum .photo .info {
+    float: left;
+    width: 400px; }
+  
+  #editphotoalbum .photo .info textarea {
+    width: 290px; }
+  
+  #editphotoalbum .photo .info .tags {
+    line-height: 15px; }
+  
+  #editphotoalbum .photo .info .notags {
+    display: none; }
+
+  #editphotoalbum .photo .info label {
+    float: left;
+    display: block;
+    margin-bottom: 2px; }
+
+#editphoto small,
+#editphotoalbum small {
+  color: gray; }
+
+#editphoto textarea,
+#editphotoalbum textarea {
+  margin-top: 0px; }
+
+.editphotos .tab_bar {
+  margin: 0px 0px 0px; }
+
+.editalbum .tab_bar {
+  margin: 0px 0px 10px; }
+
+.editalbum #newalbum {
+  padding-top: 12px; }
+
+/* Tag People */
+
+#selector {
+  top: 100px;
+  left: 300px;
+  position: absolute;
+  font-size: 11px;
+  width: 180px;
+  margin-bottom: 20px;
+  background: white;
+  border: solid 1px #3B5998;
+  border-bottom: solid 2px #3B5998;
+  /*border-right: solid 1px #D8DFEA;*/ }
+  
+  #selector input {
+    margin: 2px 5px 0px;
+    width: 164px; }
+  
+  #selector label {
+    display: block;
+    margin: 2px 5px 2px;
+    font-weight: bold;
+    color: gray; }
+  
+  #selector .buttons {
+    text-align: center; }
+  #selector .buttons input {
+    margin: 5px 2px; }
+  #selector .buttons .tag {
+    width: 50px; }
+  #selector .buttons .cancel {
+    width: 60px; }
+
+#userlist {
+  line-height: 20px;
+  width: 180px;
+  height: 200px;
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+  background: #eee;
+  overflow: auto; }
+  
+  #userlist label {
+    display: inline;
+    margin: 0px 0px 0px 0px;
+    font-weight: normal;
+    color: #000000;
+  }
+  
+  #userlist input {
+    width: auto; }
+  
+  #userlist hr {
+    padding: 0px;
+    margin: 2px 0px; }
+  
+  #userlistdiv {
+    line-height: 1px;
+    margin: 0px 8px;
+    padding: 0px;
+    height: 1px;
+    width: 140px;
+    background: red; }
+
+#invite_section {
+    margin: 6px;
+    border: 1px solid #c0c0c0;
+    background: #f1f1f1;
+    padding: 4px;
+    font-size: 9px; }
+
+#invite_section .inputtext {
+    width: 100px;
+    font-size: 9px;
+    height: 11px; }
+
+#invite_section .inputcheckbox { 
+    width: auto; 
+    float: left; }
+
+#invite_section label {
+    width: 30px;
+    margin: 0px;
+    float :left;
+    padding-top: 6px; }
+
+#frame {
+  width: 62px;
+  height: 62px;
+  position: absolute;
+  cursor: crosshair;
+  background: url(../images/tagframe.gif); }
+
+
+/* Miscellaneous */
+
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+.clearfix { display: inline-table; }
+
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+
+/* Photo Search */
+
+#album.photosearch {
+  padding-top: 5px; }
+
+#album.photosearch h5 {
+  color: gray;
+  font-weight: normal;
+  margin: 5px 0px 5px;
+  padding: 0px 0px 4px;
+  border-bottom: solid 1px #D8DFEA; }
+  
+  #album.photosearch .sectiontype {
+    padding: 4px 0px;
+    margin: 5px 0px 4px;
+    border-bottom: solid 1px #ccc; }
+    
+    #album.photosearch .withmore { text-align: right; }
+    #album.photosearch .withmore div { float: left; }  
+
+/* additional album styles for object/events */
+  
+#album .quickselect {
+  text-align: right;
+}
+
+#ieinstallation, #cancelledactivex {
+  margin: 0 20px;
+}
+
+/* Photo Select for Objects  */
+
+.photoselect .back_to_albums {
+  margin: 0px 5px 5px; }
+
+.photoselect .buttons {
+  text-align: center;
+  padding: 7px 10px; }
+
+#tagging_instructions {
+    margin: 10px 10px 0px 10px;
+    padding: 10px;
+    border: solid 1px #ffe222;
+    background: #fffbe2; }
+
+
+
+/* Photo Printshop  */
+#print_partner_info {
+  float: left;
+  width: 265px;
+  margin: 0px 0px 0px 0px;
+  padding: 5px 0px 0px 0px;
+  text-align: left; 
+}
+
+.print_item img {
+  width: 75px;
+  float: left;
+  margin-right: 10px; }
+
+#photoprintstatus { /* on photos.php */
+  color: black;
+} 
+
+#photoprintstatus .statustext {
+  padding: 3px;
+}
+
+#photoprintstatus a {
+  border: none;
+  clear: none;
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+} 
+
+#photoprintstatus a:hover {
+  background: transparent;
+  color: #3b5998;
+  text-decoration: underline;
+} 
+
+#photoprintstatus.visible {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #d8dfea;
+  color: #333;
+  padding: 5px/* 0px 0px 5px*/;
+}
+
+#photoprintstatus.loading {
+  border-bottom: 1px solid #d8dfea;
+  color: #808080;
+  padding: 5px;
+}
+
+#photoprintstatus ul {
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+#photoprintstatus li {
+  list-style-type: none;
+  margin: 0px;
+  padding-top: 10px;
+}
+
+#photoprintstatus li a {
+/*  border-top: 1px solid #d8dfea;
+  display: block;*/
+  padding: 2px 3px;
+}
+
+#photoprintstatus li a:hover {
+/*  background: #3b5998;
+  color: white;
+  text-decoration: none;*/
+}
+
+.cart_instructions {
+   background: #FFFBE2; 
+   margin:5px 7px 5px 5px; 
+   padding: 5px; border: 1px solid #FFE222;
+   text-align:center;
+
+
+}
+
+
+#photoprint_cart {
+  padding: 10px 0px 0px 0px;
+  overflow: hidden;
+}
+
+#photoprint_cart h2 {
+  color: #333;
+  padding: 0px 4px 4px 4px;
+}
+
+#photoprint_cart table.cart_item {
+  display: block;
+  float: left;
+  font-size: 10px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+  overflow: hidden;
+}
+
+#photoprint_cart table.cart_item td {
+  margin: auto;
+  padding: auto;
+  width: 104px;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+#photoprint_cart table.cart_item a.img {
+  border: 1px solid #d0d0d0;
+  background: #FFFFFF;
+  display: block;
+  margin: auto auto 5px auto;
+  padding: 3px 3px 3px 3px;
+  width: 75px;
+}
+
+#photoprint_cart table.cart_item a.img:hover {
+  border-color: #3b5998;
+}
+
+#photoprint_cart table.cart_item a.img span {
+  display: block;
+  height: expression((this.getElementsByTagName('img').length==1?Math.min(this.getElementsByTagName('img')[0].offsetHeight,70):70)+'px');
+  max-height: 70px;
+  overflow: hidden;
+  width: 75px;
+}
+
+#photoprint_cart table.cart_item a.img img {
+  display: block;
+}
+
+.set_photoprint_main_col label {
+  color: black;
+  font-weight: normal;
+}
+
+.photoprint_header {
+  margin-left: 10px;
+}
+
+.my_photos .photoprint_header h4 {
+  font-size: 14px;
+}
+
+.photoprint_subtitle {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.photoprint_note {
+  color: #606060;
+  font-size: 0.8em;
+}
+
+.photoprint_details img {
+  float: left;
+  margin: 0px 15px;
+}
+
+.print_item h5 {
+font-size: 12px; }
+
+.print_item .label {
+  color: gray; }
+
+.footer_bar {
+  background: white;
+  border: 0px;
+  clear: both;
+  padding-bottom: 1px; }
+
+#public_link_editphoto, #public_link_editalbum, #public_link_album {
+  clear: both;
+  color: #333;
+  font-size: 9px;
+  padding: 5px 5px;
+  text-align: center; }
+
+#public_link_album {
+  margin: 10px 0px 0px 0px; }
+
+#public_link_editphoto, #public_link_editalbum {
+  margin: 20px 0px 0px 0px; }
+
+#public_link_editalbum, #public_link_album {
+  background: #f7f7f7;
+  border-top: 1px solid #D8DFEA; }
+
+#public_link_editphoto span, #public_link_editalbum span, #public_link_album span { 
+  color: black; 
+  display: block; 
+  font-size: 11px; }
+                                
+
+
+

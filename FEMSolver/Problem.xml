@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--<Structure>
+  <Nodes>
+    <Node number="1">
+      <Position x="0 in" y="0 in"></Position>
+      <Displacement x="0 in" y="0 in"></Displacement>
+    </Node>
+    <Node number="2">
+      <Position x="40 in" y="0 in"></Position>
+      <Displacement y="0 in"></Displacement>
+      <Force x="20000 lb"></Force>
+    </Node>
+    <Node number="3">
+      <Position x="40 in" y="30 in"></Position>
+      <Force y="-25000 lb"></Force>
+    </Node>
+    <Node number="4">
+      <Position x="0 in" y="30 in"></Position>
+      <Displacement x="0 in" y="0 in"></Displacement>
+    </Node>
+  </Nodes>
+  <Elements>
+    <Element number ="1" material="Material 1" area="1 in²" node1="1" node2="2"/>
+    <Element number ="2" material="Material 1" area="1 in²" node1="2" node2="3"/>
+    <Element number ="3" material="Material 1" area="1 in²" node1="1" node2="3"/>
+    <Element number ="4" material="Material 1" area="1 in²" node1="3" node2="4"/>
+  </Elements>
+  <Materials>
+    <Material name="Material 1" elasticModulus="29.5e+6 psi" />
+  </Materials>
+</Structure>-->
+<!--<Structure name="Example Problem" dof="2" units="english">
+  <Nodes>
+    <Node number="1">
+      <Position x="0 in" y="10 in"></Position>
+      <Displacement x="0 in" y="0 in"></Displacement>
+    </Node>
+    <Node number="2">
+      <Position x="0 in" y="0 in"></Position>
+      <Displacement x="0 in" y="0 in"></Displacement>
+    </Node>
+    <Node number="3">
+      <Position x="10 in" y="0 in"></Position>
+      <Force y="-5000 lbf"></Force> 
+    </Node>
+  </Nodes>
+  <Elements>
+    <Element number ="1" material="Material 1" area="2 in²" node1="1" node2="3"/>
+    <Element number ="2" material="Material 1" area="2 in²" node1="2" node2="3"/>
+  </Elements>
+  <Materials>
+    <Material name="Material 1" elasticModulus="30e+6 psi" />
+  </Materials>
+</Structure>-->
+<!--<Structure name="Problem 1" dof="2" units="english">
+  <Nodes>
+    <Node number="1">
+      <Position x="0 in" y="0 in"></Position>
+      <Displacement x="0 in" y="0 in"></Displacement>
+    </Node>
+    <Node number="2">
+      <Position x="83.1384 in" y="0 in"></Position>
+      <Displacement x="0 in" y="0 in"></Displacement>
+    </Node>
+    <Node number="3">
+      <Position x="62.35382 in" y="36 in"></Position>
+      <Force x="4000 lbf" y="3000 lbf"></Force> 
+    </Node>
+    <Node number="4">
+      <Position x="0 in" y="72 in"></Position>
+      <Displacement x="0 in" y="0 in"></Displacement>
+    </Node>
+  </Nodes>
+  <Elements>
+    <Element number ="1" material="Material 1" area="1 in²" node1="1" node2="3"/>
+    <Element number ="2" material="Material 1" area="1 in²" node1="4" node2="3"/>
+    <Element number ="3" material="Material 1" area="1 in²" node1="2" node2="3"/>
+  </Elements>
+  <Materials>
+    <Material name="Material 1" elasticModulus="15e+6 psi" />
+  </Materials>
+</Structure>-->
+<!--<Structure name="Problem 2" dof="2" units="SI">
+  <Nodes>
+    <Node number="1">
+      <Position x="0 m" y="0 m"></Position>
+      <Displacement x="0 m" y="0 m"></Displacement>
+    </Node>
+    <Node number="2">
+      <Position x="0 m" y="3 m"></Position>
+      <Displacement x="0 m" y="0 m"></Displacement>
+    </Node>
+    <Node number="3">
+      <Position x="4 m" y="0 m"></Position>
+      <Force x="9641.8 N" y="11490 N"></Force>
+    </Node>
+    <Node number="4">
+      <Position x="4 m" y="-1 m"></Position>
+      <Displacement x="0 m" y="0 m"></Displacement>
+    </Node>
+  </Nodes>
+  <Elements>
+    <Element number ="1" material="Material 1" area="3.14159e-4 m²" node1="1" node2="3"/>
+    <Element number ="2" material="Material 1" area="3.14159e-4 m²" node1="2" node2="3"/>
+    <Element number ="3" material="Spring" area="1 m²" node1="4" node2="3"/>
+  </Elements>
+  <Materials>
+    <Material name="Material 1" elasticModulus="80 GPa" />
+    <Material name="Spring" elasticModulus="50 kPa" />
+  </Materials>
+</Structure>-->
+<!--<Structure name="Problem 2" dof="1" units="SI">
+  <Nodes>
+    <Node number="1">
+      <Position x="0 m"></Position>
+      <Displacement x="0 m"></Displacement>
+    </Node>
+    <Node number="2">
+      <Position x="1 m"></Position>
+      <Force x="10 kN"></Force>
+    </Node>
+  </Nodes>
+  <Elements>
+    <Element number ="1" material="Material 1" area="3.14159e-4 m²" node1="1" node2="2"/>
+  </Elements>
+  <Materials>
+    <Material name="Material 1" elasticModulus="80 GPa" />
+    <Material name="Spring" elasticModulus="50 kPa" />
+  </Materials>
+</Structure>-->
+<Matrices>
+  <F>
+    <Col>0,0,0,0,-1500,0,0,-300,-1500</Col>
+  </F>
+  <K>
+    <Row>1866,0,0,-1866,0,0,0,0,0</Row>
+    <Row>1866,0,0,-1866,0,0,0,0,0</Row>
+  </K>
+</Matrices>

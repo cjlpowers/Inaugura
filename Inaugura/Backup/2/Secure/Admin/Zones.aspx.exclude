@@ -1,0 +1,274 @@
+<%@ Page Language="C#" MasterPageFile="~/Default.master" AutoEventWireup="true"
+    CodeFile="Zones.aspx.cs" Inherits="Zones" Title="Untitled Page" ValidateRequest="false" %>
+
+<%@ MasterType VirtualPath="~/Default.master" %>
+<asp:Content ID="Content3" runat="server" ContentPlaceHolderID="mPlaceHolderBody">
+    <table>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <p id="mLbLogin" class="Heading" runat="server">
+                                Countries</p>
+                        </td>
+                    </tr>                    
+                    <tr>
+                        <td>
+                            <asp:ListBox ID="mLstCountries" runat="server" AutoPostBack="True" CssClass="ListBox"
+                                Width="250px" OnSelectedIndexChanged="mLstCountries_SelectedIndexChanged" Rows="2"></asp:ListBox></td>
+                    </tr>
+                    <tr>
+                        <td align="right" id="mRowCountryOptions" runat="server">
+                            <asp:LinkButton ID="mBtnNewCountry" runat="server" CssClass="ImportantText" OnClick="mBtnNewCountry_Click">New Country</asp:LinkButton>
+                            <asp:LinkButton ID="mBtnDeleteCountry" runat="server" CssClass="ImportantText" OnClick="mBtnDeleteCountry_Click"
+                                OnClientClick="return confirm('Are you sure you want to delete the selected country?');">Delete Country</asp:LinkButton>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="mRowCreateCountry" align="right" runat="server" visible="false">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p class="ImportantText">
+                                            Name:</p>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="mTxtCountryName" runat="server" CssClass="MedTextField"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="right">
+                                        <asp:LinkButton ID="mBtnCountryCreate" runat="server" CssClass="ImportantText" OnClick="mBtnCountryCreate_Click">Add</asp:LinkButton>
+                                        <asp:LinkButton ID="mBtnCountryCancel" runat="server" CssClass="ImportantText" OnClick="mBtnCountryCancel_Click">Cancel</asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <p id="P1" class="Heading" runat="server">
+                                Provinces</p>
+                        </td>
+                    </tr>                    
+                    <tr>
+                        <td>
+                            <asp:ListBox ID="mLstProvinces" runat="server" AutoPostBack="True" CssClass="ListBox"
+                                Width="250px" OnSelectedIndexChanged="mLstProvinces_SelectedIndexChanged" Rows="3"></asp:ListBox></td>
+                    </tr>
+                    <tr>
+                        <td align="right" id="mRowProvinceOptions" runat="server">
+                            <asp:LinkButton ID="mBtnNewProvince" runat="server" CssClass="ImportantText" OnClick="mBtnNewProvince_Click">New Province</asp:LinkButton>
+                            <asp:LinkButton ID="mBtnDeleteProvince" runat="server" CssClass="ImportantText" OnClick="mBtnDeleteProvince_Click"
+                                OnClientClick="return confirm('Are you sure you want to delete the selected province?');">Delete Province</asp:LinkButton>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="mRowCreateProvince" align="right" runat="server" visible="false">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p class="ImportantText">
+                                            Name:</p>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="mTxtProvinceName" runat="server" CssClass="MedTextField"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="right">
+                                        <asp:LinkButton ID="mBtnProvinceAdd" runat="server" CssClass="ImportantText" OnClick="mBtnProvinceAdd_Click">Add</asp:LinkButton>
+                                        <asp:LinkButton ID="mBtnProvinceCancel" runat="server" CssClass="ImportantText" OnClick="mBtnProvinceCancel_Click">Cancel</asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <p id="P3" class="Heading" runat="server">
+                                Regions</p>
+                        </td>
+                    </tr>                    
+                    <tr>
+                        <td>
+                            <asp:ListBox ID="mLstRegions" runat="server" AutoPostBack="True" CssClass="ListBox"
+                                Width="250px" OnSelectedIndexChanged="mLstRegions_SelectedIndexChanged"></asp:ListBox></td>
+                    </tr>
+                    <tr>
+                        <td align="right" id="mRowRegionOptions" runat="server">
+                            <asp:LinkButton ID="mBtnNewRegion" runat="server" CssClass="ImportantText" OnClick="mBtnNewRegion_Click">New Region</asp:LinkButton>
+                            <asp:LinkButton ID="mBtnDeleteRegion" runat="server" CssClass="ImportantText" OnClick="mBtnDeleteRegion_Click"
+                                OnClientClick="return confirm('Are you sure you want to delete the selected region?');">Delete Region</asp:LinkButton>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="mRowCreateRegion" align="right" runat="server" visible="false">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p class="ImportantText">
+                                            Name:</p>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="mTxtRegionName" runat="server" CssClass="MedTextField"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="right">
+                                        <asp:LinkButton ID="mBtnRegionAdd" runat="server" CssClass="ImportantText" OnClick="mBtnRegionAdd_Click">Add</asp:LinkButton>
+                                        <asp:LinkButton ID="mBtnRegionCancel" runat="server" CssClass="ImportantText" OnClick="mBtnRegionCancel_Click">Cancel</asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <p id="P4" class="Heading" runat="server">
+                                Cities</p>
+                        </td>
+                    </tr>                    
+                    <tr>
+                        <td>
+                            <asp:ListBox ID="mLstCities" runat="server" AutoPostBack="True" CssClass="ListBox"
+                                Width="250px" OnSelectedIndexChanged="mLstCities_SelectedIndexChanged"></asp:ListBox></td>
+                    </tr>
+                    <tr>
+                        <td align="right" id="mRowCityOptions" runat="server">
+                            <asp:LinkButton ID="mBtnNewCity" runat="server" CssClass="ImportantText" OnClick="mBtnNewCity_Click">New City</asp:LinkButton>
+                            <asp:LinkButton ID="mBtnDeleteCity" runat="server" CssClass="ImportantText" OnClick="mBtnDeleteCity_Click"
+                                OnClientClick="return confirm('Are you sure you want to delete the selected city?');">Delete City</asp:LinkButton>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="mRowCreateCity" align="right" runat="server" visible="false">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p class="ImportantText">
+                                            Name:</p>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="mTxtCityName" runat="server" CssClass="MedTextField"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="right">
+                                        <asp:LinkButton ID="mBtnCityAdd" runat="server" CssClass="ImportantText" OnClick="mBtnCityAdd_Click">Add</asp:LinkButton>
+                                        <asp:LinkButton ID="mBtnCityCancel" runat="server" CssClass="ImportantText" OnClick="mBtnCityCancel_Click">Cancel</asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <p id="P5" class="Heading" runat="server">
+                                Districts</p>
+                        </td>
+                    </tr>                    
+                    <tr>
+                        <td>
+                            <asp:ListBox ID="mLstDistricts" runat="server" CssClass="ListBox"
+                                Width="250px"></asp:ListBox></td>
+                    </tr>
+                    <tr>
+                        <td align="right" id="mRowDistrictOptions" runat="server">
+                            <asp:LinkButton ID="mBtnNewDistrict" runat="server" CssClass="ImportantText" OnClick="mBtnNewDistrict_Click">New District</asp:LinkButton>
+                            <asp:LinkButton ID="mBtnDeleteDistrict" runat="server" CssClass="ImportantText" OnClick="mBtnDeleteDistrict_Click"
+                                OnClientClick="return confirm('Are you sure you want to delete the selected district?');">Delete District</asp:LinkButton>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="mRowCreateDistrict" align="right" runat="server" visible="false">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p class="ImportantText">
+                                            Name:</p>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="mTxtDistrictName" runat="server" CssClass="MedTextField"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td>
+                                        <p class="ImportantText">
+                                            Zone:</p>
+                                    </td>
+                                    <td>
+                                        <asp:DropDownList ID="mDlZones" runat="server" CssClass="Control" Width="186px">
+                                        </asp:DropDownList></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="right">
+                                        <asp:LinkButton ID="mBtnDistrictAdd" runat="server" CssClass="ImportantText" OnClick="mBtnDistrictAdd_Click">Add</asp:LinkButton>
+                                        <asp:LinkButton ID="mBtnDistrictCancel" runat="server" CssClass="ImportantText" OnClick="mBtnDistrictCancel_Click">Cancel</asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td valign="top"><table>
+                <tr>
+                    <td>
+                        <p id="P2" class="Heading" runat="server">Zones</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="Text">
+                            The following is a list of zones</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ListBox ID="mLstZones" runat="server" CssClass="ListBox"
+                                Width="250px" Rows="6">
+                        </asp:ListBox></td>
+                </tr>
+                <tr>
+                    <td align="right" id="mRowZoneOptions" runat="server">
+                        <asp:LinkButton ID="mBtnNewZone" runat="server" CssClass="ImportantText" OnClick="mBtnNewZone_Click">New Zone</asp:LinkButton>
+                        <asp:LinkButton ID="mBtnDeleteZone" runat="server" CssClass="ImportantText" OnClick="mBtnDeleteZone_Click"
+                            OnClientClick="return confirm('Are you sure you want to delete the selected zone?');">Delete Zone</asp:LinkButton>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="mRowCreateZone" align="right" runat="server" visible="false">
+                        <table>
+                            <tr>
+                                <td>
+                                    <p class="ImportantText">
+                                        Name:</p>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="mTxtZoneName" runat="server" CssClass="MedTextField"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="right">
+                                    <asp:LinkButton ID="mBtnZoneAdd" runat="server" CssClass="ImportantText" OnClick="mBtnZoneAdd_Click">Add</asp:LinkButton>
+                                    <asp:LinkButton ID="mBtnZoneCancel" runat="server" CssClass="ImportantText" OnClick="mBtnZoneCancel_Click">Cancel</asp:LinkButton>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            </td>
+        </tr>
+    </table>
+</asp:Content>

@@ -1,0 +1,11 @@
+<%@ Page Language="C#" MasterPageFile="~/Default.master" AutoEventWireup="true" CodeFile="ActivateListing.aspx.cs" Inherits="ActivateListing" Title="Untitled Page" ValidateRequest="false" %>
+<%@ MasterType VirtualPath="~/Default.master" %>
+<%@ Register Assembly="PayPal.Web.Controls, Version=1.0.22.18680, Culture=neutral, PublicKeyToken=97b06e1531ed482a"
+    Namespace="PayPal.Web.Controls" TagPrefix="cc1" %>
+<asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ContentPlaceHolder2">
+ <cc1:BuyNowButton ID="mBtnByNow" runat="server" Amount="1.99" BusinessEmail="business@realleads.ca"
+        CurrencyCode="CAD" DoNotAskShipping="True"
+        ItemName="RealLeads Subscription" UseSandbox="True"/>
+</asp:Content>
+
+

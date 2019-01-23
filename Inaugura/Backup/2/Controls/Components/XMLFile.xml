@@ -1,0 +1,160 @@
+<Listing type="Inaugura.RealLeads.RealEstateListing" assembly="Inaugura.RealLeads, Version=1.0.1982.28272, Culture=neutral, PublicKeyToken=null" id="b82ab797-8c0d-46a0-a631-c355f408cde1" agentId="c285eb09-dfe3-476c-b43a-fedd8eba5f7f" expiration="2005-11-14T06:01:23.1718750Z" status="Preview">
+    <Description>
+        Fine features of this exquisite executive retreat include an open- concept design with dramatic cathedral ceiling, radiant in-floor heat, great use of ceramic, master-bedroom loft, stunning maple kitchen with granite counters, and maple trim throughout.
+
+        The master-bedroom loft is a spacious 500 square feet with a gas fireplace and four-piece ensuite featuring a two-person air whirlpool tub. A walk-in closet is also here.
+
+        In addition to a soaring 23-foot cathedral ceiling and large picture windows, the open concept boasts a sunroom, dining room, living room with gas fireplace, and maple eat-in kitchen with island and quality built-ins.
+
+        The exceptional appointments continue outside with a concrete patio surrounded by gardens, a large pond, three-tier waterfalls and water wheel. A double garage with furnace is also here.
+
+        To top it off, this is country living in the city — over 10 acres just minutes from all amenities!
+
+        Call today for a personal viewing appointment.
+    </Description>
+    <Images>
+        <Image id="e8a49d95-a037-48e8-ba32-24e83c7f114b" fileId="160426fd-fc94-4302-98e6-8fff532287b7" name="House - Enterance">
+            <Description>The front enterance</Description>
+        </Image>
+        <Image id="f00d335f-8099-479f-8b1a-9cd41aa71484" fileId="75f09465-62e2-4fe0-83c5-13b097ab1f9e" name="House - Side">
+            <Description>The side of the house</Description>
+        </Image>
+        <Image id="b818b91c-b5c8-4ab9-b1ec-04da45e03bec" fileId="c345a044-37c1-49cb-a69b-dbd178519a2f" name="House - Side">
+            <Description>The side of the house</Description>
+        </Image>
+        <Image id="c12b256b-1a8f-4dc0-bbb3-7f092c06efc7" fileId="884f0c54-574e-4e92-8b55-300e877e2a89" name="House - Back">
+            <Description>The back of the house</Description>
+        </Image>
+        <Image id="e31181eb-b969-46db-be1a-14eabac70bca" fileId="41b332bb-45b2-412f-aacd-7f42c8557b8d" name="Lot - Side">
+            <Description>The side of the lot</Description>
+        </Image>
+        <Image id="84568a10-3304-4a12-b831-2c8da76879ac" fileId="613999ae-b341-4350-bd12-cc8abf455b23" name="Shed">
+            <Description>The shed located at the back of the property</Description>
+        </Image>
+        <Image id="2dfb5f04-0700-4f1f-b8b0-8ae4bbaffba6" fileId="c5c215f3-54ab-4531-80b2-91fe23ed0607" name="Front Enterance">
+            <Description>The front enterance</Description>
+        </Image>
+        <Image id="d51a13c7-9b86-499b-85fc-88191a8a0b79" fileId="3af2f3a8-8582-4260-b713-627ccc60b756" name="Interior - Stairs">
+            <Description>The stairs between the first and second level</Description>
+        </Image>
+        <Image id="84dc6341-9d23-450e-9146-d8c9a3520cbd" fileId="3b93e38f-6ee7-4dff-88ae-ef35b57d47a3" name="Living Room">
+            <Description>The living room</Description>
+        </Image>
+        <Image id="9b7976e0-bc77-42d4-b4f2-133448712a16" fileId="3e86e59d-d3b6-44c6-8e6c-53922c1d6a8d" name="Dining Room">
+            <Description>The dining room</Description>
+        </Image>
+        <Image id="5d74f016-94d4-4aea-8304-eabd45445185" fileId="9fbfec48-7102-4063-af91-9e9a60b3ba38" name="Recreational Room">
+            <Description>The recreational room</Description>
+        </Image>
+        <Image id="9f4a6fd2-5fb7-4871-bfd3-bc2d4b162732" fileId="7bb3ef23-f4d2-4d40-ba3d-6040c72fadc5" name="Kitchen">
+            <Description>The kitchen</Description>
+        </Image>
+        <Image id="a07371f5-5ebb-47c9-8007-3dd4b5ceeaba" fileId="6cadbe67-4510-4298-8185-023483f1bea2" name="Fireplace #2">
+            <Description>The fireplace located in the recreational room</Description>
+        </Image>
+        <Image id="7f0941bc-02da-4560-8ec0-7a37acf2680e" fileId="4d489432-b9ee-49a0-803c-5a048511b877" name="Fireplace #1">
+            <Description>The fireplace located in the living room</Description>
+        </Image>
+    </Images>
+    <Directions>Drive to 7092 Crowsfoot Rd.</Directions>
+    <Size value="20000" unit="Square Feet" />
+    <LocationFeatures>
+        <Item>2 Golf Courses within 7 minute drive</Item>
+    </LocationFeatures>
+    <InteriorFeatures>
+        <Item>New Windows</Item>
+        <Item>3 Fireplaces</Item>
+    </InteriorFeatures>
+    <ExteriorFeatures>
+        <Item>Pattio</Item>
+    </ExteriorFeatures>
+    <Address street="7092 Crowsfoot Rd." city="Breslau" country="Canada" zipPostal="N0B 1M0" stateProv="Ontario" />
+    <Lot>
+        <Description>A rural 4 acre lot</Description>
+        <Size value="4" unit="Acre" />
+        <Features>
+            <Item>Creek on the east side of the property</Item>
+            <Item>Orchard with 50+ trees</Item>
+            <Item>Hedge providing privacy</Item>
+        </Features>
+    </Lot>
+    <Costs>
+        <Cost name="Lawn Maintainance" description="General lawn care during summer months" value="1234" />
+    </Costs>
+    <Gararge attached="True" parkingSpaces="2">
+        <Description>2 door attached gararge with work bench.</Description>
+        <Dimensions>
+            <Width value="25" unit="Feet" />
+            <Depth value="30" unit="Feet" />
+        </Dimensions>
+        <Features>
+            <Item>Workbench</Item>
+            <Item>Windows</Item>
+        </Features>
+    </Gararge>
+    <Levels>
+        <Level name="Lower Level" aboveGrade="False">
+            <Size value="2000" unit="Square Feet" />
+            <Features />
+        </Level>
+        <Level name="Main Level" aboveGrade="True">
+            <Size value="2000" unit="Square Feet" />
+            <Features />
+        </Level>
+        <Level name="Upper Level" aboveGrade="True">
+            <Size value="2000" unit="Square Feet" />
+            <Features />
+            <Rooms>
+                <Room name="Bedroom 1" roomType="Bedroom">
+                    <Description>The east facing bedroom</Description>
+                    <Dimensions>
+                        <Width value="8" unit="Feet" />
+                        <Depth value="12" unit="Feet" />
+                    </Dimensions>
+                    <FloorMaterial value="2" />
+                    <Features>
+                        <Item>Large windows facing east</Item>
+                    </Features>
+                </Room>
+                <Room name="Bedroom 2" roomType="Bedroom">
+                    <Description>The south facing bedroom</Description>
+                    <Dimensions>
+                        <Width value="12" unit="Feet" />
+                        <Depth value="14" unit="Feet" />
+                    </Dimensions>
+                    <FloorMaterial value="2" />
+                    <Features>
+                        <Item>2 Large windows</Item>
+                        <Item>Large 2 door closet</Item>
+                    </Features>
+                </Room>
+                <Room name="Master Bedroom" roomType="Bedroom">
+                    <Description>The master beadroom</Description>
+                    <Dimensions>
+                        <Width value="16" unit="Feet" />
+                        <Depth value="20" unit="Feet" />
+                    </Dimensions>
+                    <FloorMaterial value="2" />
+                    <Features>
+                        <Item>Seperate bathroom</Item>
+                        <Item>Large 2 door closet</Item>
+                        <Item>Windows facing north and west</Item>
+                    </Features>
+                </Room>
+            </Rooms>
+        </Level>
+    </Levels>
+    <PropertyTax value="3000" year="2006" estimated="True" />
+    <PropertyType value="4" />
+    <RoofType value="1" />
+    <FoundationType value="1" />
+    <HeatingPrimary value="1" />
+    <HeatingSecondary value="5" />
+    <ExteriorPrimary value="3" />
+    <ExteriorSecondary value="3" />
+    <ElectricalService value="3" />
+    <BasementType value="3" />
+    <RentalEquipment>
+        <Item>Water Tank</Item>
+    </RentalEquipment>
+</Listing>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Ants">
+</Property><Property Name="Solution File" Value="C:\Development\Personal\Inaugura\Inaugura\Ants\Ants.sln">
+</Property><Property Name="Date" Value="May-20-10">
+</Property><Property Name="Time" Value="12:18:16 PM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="Ants" Source="Ants\Ants.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Ants" Source="Ants\Ants.csproj" Description="Converted">
+</Event></UpgradeLog>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu>
+  <menuSpacer>
+    <cssclass>SKMMainFillerLeft</cssclass>
+  </menuSpacer>
+  <menuSpacer>
+    <cssclass>SKMMainSeparator</cssclass>
+  </menuSpacer>
+  <menuItem>
+    <text roles="Authenticated">My Account</text>
+    <text roles="Anonymous">Home</text>
+    <url roles="Anonymous">~/Default.aspx</url>
+    <resolveurl>true</resolveurl>
+    <cssclass>SKMMainItem</cssclass>
+    <mouseovercssclass>SKMMainItemOver</mouseovercssclass>
+    <subMenu roles="Authenticated">
+      <menuItem>
+        <text>Edit Profile</text>
+        <url>~/Secure/Profile.aspx</url>
+        <resolveurl>true</resolveurl>
+        <cssclass>SKMMenuItem</cssclass>
+        <mouseovercssclass>SKMMenuItemOver</mouseovercssclass>
+      </menuItem>
+      <menuSpacer>
+        <cssclass>SKMDropSeperator</cssclass>
+      </menuSpacer>         
+      <menuItem>
+        <text>My Listing(s)</text>
+        <url>~/Search.aspx?search=mylistings</url>
+        <resolveurl>true</resolveurl>
+        <cssclass>SKMMenuItem</cssclass>
+        <mouseovercssclass>SKMMenuItemOver</mouseovercssclass>
+      </menuItem>
+      <menuSpacer>
+        <cssclass>SKMDropSeperator</cssclass>
+      </menuSpacer>        
+       <menuItem roles="Administrator">
+        <text>Administration</text>
+        <url>~/Secure/Admin/Default.aspx</url>
+        <resolveurl>true</resolveurl>
+        <cssclass>SKMMenuItem</cssclass>
+        <mouseovercssclass>SKMMenuItemOver</mouseovercssclass>
+      </menuItem>
+      <menuSpacer roles="Administrator">
+        <cssclass>SKMDropSeperator</cssclass>
+      </menuSpacer>
+      <menuSpacer>
+        <cssclass>SKMBottomEdge</cssclass>
+      </menuSpacer>
+    </subMenu>
+  </menuItem>
+  <menuSpacer>
+    <cssclass>SKMMainSeparator</cssclass>
+  </menuSpacer>
+  <menuItem>
+    <text>Renters</text>
+    <cssclass>SKMMainItem</cssclass>
+    <mouseovercssclass>SKMMainItemOver</mouseovercssclass>
+    <subMenu>
+      <menuItem>
+        <text>Search Listings</text>
+        <url>~/Search.aspx</url>
+        <resolveurl>true</resolveurl>
+        <cssclass>SKMMenuItem</cssclass>
+        <mouseovercssclass>SKMMenuItemOver</mouseovercssclass>
+      </menuItem>
+      <menuSpacer>
+        <cssclass>SKMDropSeperator</cssclass>
+      </menuSpacer>
+      <menuSpacer>
+        <cssclass>SKMBottomEdge</cssclass>
+      </menuSpacer>
+    </subMenu>
+  </menuItem>
+  <menuSpacer>
+    <cssclass>SKMMainSeparator</cssclass>
+  </menuSpacer>
+  <menuItem>
+    <text>Owners / Subletters</text>
+    <cssclass>SKMMainItem</cssclass>
+    <mouseovercssclass>SKMMainItemOver</mouseovercssclass>
+    <subMenu>
+      <menuItem>
+        <text>Create A Listing</text>
+        <url>~/CreateListing.aspx</url>
+        <resolveurl>true</resolveurl>
+        <cssclass>SKMMenuItem</cssclass>
+        <mouseovercssclass>SKMMenuItemOver</mouseovercssclass>
+      </menuItem>
+      <menuSpacer>
+        <cssclass>SKMDropSeperator</cssclass>
+      </menuSpacer>      
+      <menuSpacer>
+        <cssclass>SKMBottomEdge</cssclass>
+      </menuSpacer>
+    </subMenu>
+  </menuItem>
+  <menuSpacer>
+    <cssclass>SKMMainSeparator</cssclass>
+  </menuSpacer>
+  <menuItem>
+    <text>About Us</text>
+    <url>~/Content.aspx?target=about</url>
+    <resolveurl>true</resolveurl>
+    <cssclass>SKMMainItem</cssclass>
+    <mouseovercssclass>SKMMainItemOver</mouseovercssclass>
+    <subMenu>
+      <menuItem>
+        <text>Contact Us</text>
+        <url>~/Feedback.aspx</url>
+        <resolveurl>true</resolveurl>
+        <cssclass>SKMMenuItem</cssclass>
+        <mouseovercssclass>SKMMenuItemOver</mouseovercssclass>
+      </menuItem>
+      <menuSpacer>
+        <cssclass>SKMDropSeperator</cssclass>
+      </menuSpacer>      
+      <menuSpacer>
+        <cssclass>SKMBottomEdge</cssclass>
+      </menuSpacer>
+    </subMenu>
+  </menuItem>
+  <menuSpacer>
+    <cssclass>SKMMainSeparator</cssclass>
+  </menuSpacer>
+  <menuSpacer>
+    <cssclass>SKMMainFillerRight</cssclass>
+  </menuSpacer>
+</menu>

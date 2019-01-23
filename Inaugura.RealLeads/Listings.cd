@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorVersion="1" MinorVersion="1" xmlns="http://www.microsoft.com/VisualStudio/EnterpriseTools/ClassDesigner/V1.1/DiagramSchema.xsd">
+  <View FilterFieldProperty="false" LastOpened="true" Name="Main">
+    <AbsoluteBounds X="0" Y="0" Height="8.5" Width="11" />
+    <Font Name="Tahoma" Size="0.1145833358168602" />
+    <Class Collapsed="false">
+      <AbsoluteBounds X="4" Y="0.5" Height="2.2016986110806465" Width="2.25" />
+      <TypeIdentifier>
+        <FullName>Inaugura.RealLeads.Listing</FullName>
+        <FileName>Listing.cs</FileName>
+        <HashCode>AAAACAAAAkABgAAAEAAAAAAIQAAAAAAAACAABAAAAAA=</HashCode>
+      </TypeIdentifier>
+      <Compartment Group="Kind" HasGroup="true" HeaderText="Fields" IsDefaultExpandCollapseState="false" />
+      <Compartment Group="Kind" HasGroup="true" HeaderText="Methods" IsDefaultExpandCollapseState="false" />
+      <LollipopPosition Position="0.20000000000000018" />
+    </Class>
+    <Class Collapsed="false">
+      <AbsoluteBounds X="2.75" Y="3.5" Height="0.93344828555981341" Width="1.5" />
+      <TypeIdentifier>
+        <FullName>Inaugura.RealLeads.RealEstateListing</FullName>
+        <FileName>RealEstateListing.cs</FileName>
+        <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      </TypeIdentifier>
+    </Class>
+    <Class Collapsed="false">
+      <AbsoluteBounds X="6.25" Y="3.5" Height="0.93344828555981252" Width="1.5" />
+      <TypeIdentifier>
+        <FullName>Inaugura.RealLeads.Classified</FullName>
+        <FileName>Classified.cs</FileName>
+        <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      </TypeIdentifier>
+    </Class>
+  </View>
+</Diagram>

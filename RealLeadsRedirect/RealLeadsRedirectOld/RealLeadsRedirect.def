@@ -1,0 +1,7 @@
+; REALLEADSREDIRECT.def : declares the module parameters for the DLL.
+
+LIBRARY	     "REALLEADSREDIRECT"
+
+EXPORTS
+	HttpFilterProc
+	GetFilterVersion

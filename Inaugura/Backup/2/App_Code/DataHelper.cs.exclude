@@ -1,0 +1,121 @@
+using System;
+using System.Web.SessionState;
+
+/// <summary>
+/// Summary description for Helper
+/// </summary>
+public static class DataHelper
+{
+    #region Variables
+    private const string InauguraDataStoreKey = "InauguraDataStore";
+    private const string RealLeadsDataStoreKey = "RealLeadsDataStore";
+    #endregion
+
+    #region Properties
+    /// <summary>
+	/// Gets the Inaugura Data Store
+	/// </summary>
+	/// <value></value>
+	static public Inaugura.RealLeads.Data.IRealLeadsDataAdaptor RealLeadsDataStore
+	{
+		get
+		{
+            if (System.Web.HttpContext.Current.Application[RealLeadsDataStoreKey] != null)
+                return System.Web.HttpContext.Current.Application[RealLeadsDataStoreKey] as Inaugura.RealLeads.Data.IRealLeadsDataAdaptor;
+            else
+                return null;
+		}
+        set
+        {
+            System.Web.HttpContext.Current.Application[RealLeadsDataStoreKey] = value;
+        }
+	}    
+	#endregion
+
+
+    #region Feature Listings
+    private const string FeaturedListingKey = "FeaturedListing";
+    private const string FeaturedListingTimeKey = "FeaturedListingTime";
+
+    static public Inaugura.RealLeads.Listing FeaturedListing
+    {
+        get
+        {
+
+            if (System.Web.HttpContext.Current.Application[FeaturedListingKey] == null || (DateTime.Now - FeaturedListingTimeChange) > TimeSpan.FromMinutes(10))
+            {
+                    // get the featured listing
+                    Inaugura.RealLeads.ListingSearch search = null;
+                    if (Helper.Configuration.Mode == Helper.Configuration.WebSiteMode.RealEstateListings)
+                        search = new Inaugura.RealLeads.RealEstateSearch();
+                    else if (Helper.Configuration.Mode == Helper.Configuration.WebSiteMode.RentalPropertyListings)
+                        search = new Inaugura.RealLeads.RentalPropertySearch();
+                    else
+                        throw new NotSupportedException("The website mode was not supported");
+                
+                    DataHelper.RealLeadsDataStore.ListingStore.SearchListings(search);
+                    Random rand = new Random((int)DateTime.Now.Ticks);
+                    search.Status = Inaugura.RealLeads.Listing.ListingStatus.Active;
+                    search.StartIndex = rand.Next(search.ResultCount - 1);
+                    search.EndIndex = search.StartIndex + 1;
+                    Inaugura.RealLeads.Listing[] listings = DataHelper.RealLeadsDataStore.ListingStore.SearchListings(search);                   
+                                    
+                    if (listings.Length > 0)
+                    {                                               
+                        Inaugura.RealLeads.Listing listing = listings[rand.Next(listings.Length-1)];
+                        System.Web.HttpContext.Current.Application[FeaturedListingKey] = listing;
+                        FeaturedListingTimeChange = DateTime.Now;
+                        System.Diagnostics.Debug.WriteLine("Loaded featured listing " +  listing.ID);                            
+                    }
+            }
+            return System.Web.HttpContext.Current.Application[FeaturedListingKey] as Inaugura.RealLeads.Listing;
+        }
+    }
+
+    static private DateTime FeaturedListingTimeChange
+    {
+        get
+        {
+            if (System.Web.HttpContext.Current.Application[FeaturedListingTimeKey] == null)
+                return DateTime.MinValue;
+            else
+                return (DateTime)System.Web.HttpContext.Current.Application[FeaturedListingTimeKey];
+        }
+        set
+        {
+            System.Web.HttpContext.Current.Application[FeaturedListingTimeKey] = value;
+        }
+    }
+
+    #endregion
+
+    #region Methods
+    /// <summary>
+    /// Gets a listing by first lookin at cached searches then the database
+    /// </summary>
+    /// <param name="id">The listing ID</param>
+    /// <returns>The listing otherwise null</returns>
+    public static Inaugura.RealLeads.Listing GetListing(Guid id)
+    {
+        Inaugura.RealLeads.Listing listing = null;
+        if(Helper.Session.Search != null)
+            listing = Helper.Session.Search.GetResut(id);
+        if (listing == null)
+            return DataHelper.RealLeadsDataStore.ListingStore.GetListing(id);
+        else
+            return listing;
+    }
+
+    /// <summary>
+    ///  Updates a listing in both cached searches and the datastore
+    /// </summary>
+    /// <param name="listing">The updated listing</param>
+    public static void UpdateListing(Inaugura.RealLeads.Listing listing)
+    {
+        DataHelper.RealLeadsDataStore.ListingStore.Update(listing);
+
+        if (Helper.Session.Search != null)
+            Helper.Session.Search.UpdateResult(listing);
+    }
+    #endregion
+}

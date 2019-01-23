@@ -1,0 +1,4 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Editor.ascx.cs" Inherits="Editor_ascx" %>
+<%@ Register Assembly="FredCK.FCKeditorV2" Namespace="FredCK.FCKeditorV2" TagPrefix="FCKeditorV2" %>
+<FCKeditorV2:FCKeditor ID="FCKeditor1" runat="server" Height="400px"></FCKeditorV2:FCKeditor><asp:Button ID="mBtnCancel" OnClick="mBtnCancel_Click" runat="server" Text="Cancel" /><asp:Button ID="mBtnSubmit" runat="server" Text="Submit" OnClick="mBtnSubmit_Click" /><asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder><asp:ImageButton ID="mBtnEdit" runat="server" ImageUrl="~/Controls/FCKeditor/Editor.gif"
+    OnClick="mBtnEdit_Click" onmouseover="this.style.border = '1px outset'" onmouseout="this.style.border = '1px solid white'" />

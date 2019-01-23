@@ -1,0 +1,121 @@
+.SKMMenuGroup
+{
+	cursor: pointer;
+	cursor: hand;	
+	
+}
+.SKMMainItem 
+{
+	height:29px;
+	cursor: pointer;
+	cursor: hand;
+	font-size: 11px;
+	color: #444444;
+	width: 146px;
+	text-align:center;	
+	background-image:url(Images/pagebg.gif);
+}
+.SKMMainItemOver
+{
+	height:29px;
+	cursor: pointer;
+	cursor: hand;
+	font-size: 11px;	
+	color: #569C18;
+	width: 146px;
+	text-align:center;
+	background-image:url(Images/pagebg.gif);
+}
+
+.SKMMenuItem
+{
+	
+	width: 146px;
+	background-image:url(Images/subMenu.gif);
+	font-size: 11px;
+	cursor: pointer;
+	color:#333333;
+	cursor: hand;
+	padding: 6px 0px 6px 0px;	
+	text-align:center;
+	background-repeat:no-repeat;
+}
+.SKMMenuItemOver
+{
+	width: 146px;
+	background-image:url(Images/subMenu.gif);
+	font-size: 11px;
+	cursor: pointer;
+	color: #569C18;
+	cursor: hand;
+	padding: 6px 0px 6px 0px;	
+	text-align:center;
+	background-repeat:no-repeat;
+}
+.SKMMainSeparator
+{	
+	margin: 0px 0px 0px 0px;
+	width:3px;
+	background-image:url(Images/mainSeparator.gif);	
+}
+
+.SKMDropSeperator
+{	
+	margin: 0px 0px 0px 0px;
+	width:146px;
+	height:2px;
+	background-image:url(Images/separator.gif);
+	background-repeat:no-repeat;
+}
+
+.SKMPartnerSpacer
+{	
+	background-color:Transparent;
+	margin: 0px 0px 0px 0px;
+	width:146px;
+	height:13px;
+	background-image:url(Images/partnerSpacer.gif);
+	background-repeat:no-repeat;
+}
+
+.SKMBottomEdge
+{	
+	background-color:Transparent;
+	margin: 0px 0px 0px 0px;
+	width:146px;
+	height:14px;
+	background-image:url(Images/footer.gif);
+	background-repeat:no-repeat;
+}
+
+.SKMMainLeftEdge
+{
+    background-image:url(Images/LeftEdge.gif);
+    width:7px;
+	height:29px;
+	border:0;
+	padding-top:0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.SKMMainRightEdge
+{
+    background-image:url(Images/RightEdge.gif);
+    width:7px;
+	height:29px;
+	border:0;
+	padding-top:0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.SKMMainFiller
+{
+	width:33px;
+	background-image:url(Images/pagebg.gif);
+	background-repeat:repeat-x;
+}
+
+.SKMSeparator
+{
+	border-right: 2px solid #C5C5C5;
+}

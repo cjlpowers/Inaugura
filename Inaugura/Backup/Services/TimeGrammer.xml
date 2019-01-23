@@ -1,0 +1,77 @@
+<GRAMMAR LANGID="409">
+	<RULE NAME="JustHour" TOPLEVEL="ACTIVE">
+		<RULEREF NAME="HourOnly"></RULEREF>		
+		<RULEREF NAME="AMPM"></RULEREF>
+	</RULE>
+	<RULE NAME="Time" TOPLEVEL="ACTIVE">
+		<RULEREF NAME="Hour"></RULEREF>
+		<RULEREF NAME="Minute"></RULEREF>
+		<RULEREF NAME="AMPM"></RULEREF>
+	</RULE>
+	<RULE NAME="HourOnly">
+		<L PROPNAME="Hours">
+			<P DISP="1:00" PRON="w ah n">one</P>
+			<P DISP="2:00" PRON="t uw">two</P>
+			<P DISP="3:00" PRON="th r iy">three</P>
+			<P DISP="4:00" PRON="f ao r">four</P>
+			<P DISP="5:00" PRON="f ay v">five</P>
+			<P DISP="6:00" PRON="s ih k s">six</P>
+			<P DISP="7:00" PRON="s eh v ax n">seven</P>
+			<P DISP="8:00" PRON="ey t">eight</P>
+			<P DISP="9:00" PRON="n ay n">nine</P>
+			<P DISP="10:00" PRON="t eh n">ten</P>
+			<P DISP="11:00" PRON="ax l eh v ax n">eleven</P>
+			<P DISP="12:00" PRON="t w eh l v">twelve</P>
+		</L>
+	</RULE>
+	<RULE NAME="Hour">
+		<L PROPNAME="Hours">
+			<P DISP="1:" PRON="w ah n">one</P>
+			<P DISP="2:" PRON="t uw">two</P>
+			<P DISP="3:" PRON="th r iy">three</P>
+			<P DISP="4:" PRON="f ao r">four</P>
+			<P DISP="5:" PRON="f ay v">five</P>
+			<P DISP="6:" PRON="s ih k s">six</P>
+			<P DISP="7:" PRON="s eh v ax n">seven</P>
+			<P DISP="8:" PRON="ey t">eight</P>
+			<P DISP="9:" PRON="n ay n">nine</P>
+			<P DISP="10:" PRON="t eh n">ten</P>
+			<P DISP="11:" PRON="ax l eh v ax n">eleven</P>
+			<P DISP="12:" PRON="t w eh l v">twelve</P>
+		</L>
+	</RULE>
+	<RULE NAME="Minute">
+		<L PROPNAME="Minutes">
+			<P DISP="00">o'clock</P>
+			<P DISP="05" PRON="ow - f ay v">o'five</P>
+			<P DISP="10" PRON="t eh n">ten</P>
+			<P DISP="15" PRON="f ih f t iy n">fifteen</P>
+			<P DISP="16">sixteen</P>
+			<P DISP="17">seventeen</P>
+			<P DISP="18">eighteen</P>
+			<P DISP="19">nineteen</P>
+			<!-- WITH "T" Sound -->
+			<P PRON="t w eh n t iy" DISP="20">twenty</P>
+			<P DISP="25" PRON="t w eh n t iy - f ay v">twenty five</P>
+			<!-- WITHOUT "T" Sound -->
+			<P PRON="t w eh n iy" DISP="20">twenty</P>
+			<P DISP="25" PRON="t w eh n iy - f ay v">twenty five</P>						
+			<P DISP="30" PRON="th er t iy">thirty</P>
+			<P DISP="35" PRON="th er t iy - f ay v">thirty five</P>
+			<P DISP="40" PRON="f ao r t iy">fourty</P>
+			<P DISP="45" PRON="f ao r t iy - f ay v">fourty five</P>
+			<P DISP="50" PRON="f ih f t iy">fifty</P>
+			<P DISP="55" PRON="f ih f t iy - f ay v">fifty five</P>			
+		</L>
+	</RULE>
+	<RULE NAME="AMPM">
+		<L PROPNAME="AMPMS">
+			<P DISP="AM">A</P>
+			<P DISP="PM">P</P>
+		</L>
+	</RULE>
+</GRAMMAR>
+
+<!--<GRAMMAR LANGID="409"><RULE NAME="Time" TOPLEVEL="ACTIVE"><RULEREF NAME="Hour"></RULEREF><RULEREF NAME="Minute"></RULEREF><RULEREF NAME="AMPM"></RULEREF></RULE><RULE NAME="Hour"><L PROPNAME="Hours"><P DISP="1:">one</P><P DISP="2:">two</P><P DISP="3:">three</P><P DISP="4:">four</P><P DISP="5:">five</P><P DISP="6:">six</P><P DISP="7:">seven</P><P DISP="8:">eight</P><P DISP="9:">nine</P><P DISP="10:">ten</P><P DISP="11:">eleven</P><P DISP="12:">twelve</P></L></RULE><RULE NAME="Minute"><L PROPNAME="Minutes"><P DISP="00">o'clock</P><P DISP="01" PRON="ow - w ah n">o'one</P><P DISP="02" PRON="ow - t uw">o'two</P><P DISP="03" PRON="ow - th r iy">o'three</P><P DISP="04" PRON="ow - f ao r">o'four</P><P DISP="05" PRON="ow - f ay v">o'five</P><P DISP="06" PRON="ow - s ih k s">o'six</P><P DISP="07" PRON="ow - s eh v ax n">o'seven</P><P DISP="08" PRON="ow - ey t">o'eight</P><P DISP="09" PRON="ow - n ay n">o'nine</P><P DISP="10">ten</P><P DISP="11">eleven</P><P DISP="12">twelve</P><P DISP="13">thirteen</P><P DISP="14">fourteen</P><P DISP="15">fifteen</P><P DISP="16">sixteen</P><P DISP="17">seventeen</P><P DISP="18">eighteen</P><P DISP="19">nineteen</P><P DISP="20" PRON="t w eh n t iy">twenty</P><P DISP="21" PRON="t w eh n t iy - w ah n">twenty one</P><P DISP="22" PRON="t w eh n t iy - t uw">twenty two</P><P DISP="23" PRON="t w eh n t iy - th r iy">twenty three</P><P DISP="24" PRON="t w eh n t iy - f ao r">twenty four</P><P DISP="25" PRON="t w eh n t iy - f ay v">twenty five</P><P DISP="26" PRON="t w eh n t iy - s ih k s">twenty six</P><P DISP="27" PRON="t w eh n t iy - s eh v ax n">twenty seven</P><P DISP="28" PRON="t w eh n t iy - ey t">twenty eight</P><P DISP="29" PRON="t w eh n t iy - n ay n">twenty nine</P><P DISP="30" PRON="th er t iy">thirty</P><P DISP="31" PRON="th er t iy - w ah n">thirty one</P><P DISP="32" PRON="th er t iy - t uw">thirty two</P><P DISP="33" PRON="th er t iy - th r iy">thirty three</P><P DISP="34" PRON="th er t iy - f ao r">thirty four</P><P DISP="35" PRON="th er t iy - f ay v">thirty five</P><P DISP="36" PRON="th er t iy - s ih k s">thirty six</P><P DISP="37" PRON="th er t iy - s eh v ax n">thirty seven</P><P DISP="38" PRON="th er t iy - ey t">thirty eight</P><P DISP="39" PRON="th er t iy - n ay n">thirty nine</P><P DISP="40" PRON="f ao r t iy">fourty</P><P DISP="41" PRON="f ao r t iy - w ah n">fourty one</P><P DISP="42" PRON="f ao r t iy - t uw">fourty two</P><P DISP="43" PRON="f ao r t iy - th r iy">fourty three</P><P DISP="44" PRON="f ao r t iy - f ao r">fourty four</P><P DISP="45" PRON="f ao r t iy - f ay v">fourty five</P><P DISP="46" PRON="f ao r t iy - s ih k s">fourty six</P><P DISP="47" PRON="f ao r t iy - s eh v ax n">fourty seven</P><P DISP="48" PRON="f ao r t iy - ey t">fourty eight</P><P DISP="49" PRON="f ao r t iy - n ay n">fourty nine</P><P DISP="50" PRON="f ih f t iy">fifty</P><P DISP="51" PRON="f ih f t iy - w ah n">fifty one</P><P DISP="52" PRON="f ih f t iy - t uw">fifty two</P><P DISP="53" PRON="f ih f t iy - th r iy">fifty three</P><P DISP="54" PRON="f ih f t iy - f ao r">fifty four</P><P DISP="55" PRON="f ih f t iy - f ay v">fifty five</P><P DISP="56" PRON="f ih f t iy - s ih k s">fifty six</P><P DISP="57" PRON="f ih f t iy - s eh v ax n">fifty seven</P><P DISP="58" PRON="f ih f t iy - ey t">fifty eight</P><P DISP="59" PRON="f ih f t iy - n ay n">fifty nine</P></L></RULE><RULE NAME="AMPM"><L PROPNAME="AMPMS"><P DISP="AM">AM</P><P DISP="PM">PM</P></L></RULE></GRAMMAR>-->
+
+

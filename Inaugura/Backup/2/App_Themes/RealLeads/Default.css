@@ -1,0 +1,394 @@
+﻿@import url (TableStyles.css);
+
+img
+{
+    border-style:none;
+}
+
+body {
+	background-color: #ECECEC;	
+	background-repeat: repeat-x;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family:  arial,helvetica,sans-serif;
+	font-size: 11px;
+	color: #666666;
+}
+
+p
+{
+    text-indent:15px;
+    font-size:110%;
+    margin:10px;
+}
+
+.page 
+{
+	background-repeat: repeat-y;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+
+.header 
+{
+	background-image: url(Images/header.gif);
+	background-repeat: no-repeat;
+	background-position:left;
+	position: relative;
+	width: 780px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:-70px;
+}
+
+.quickFind
+{   
+	position: relative;
+	width: 150px;
+	height: 26px;
+	margin-left: auto;
+	margin-right: auto;
+	left:300px;
+	top:32px;
+	z-index:1;
+	padding-top:1px;
+}
+
+#loginBox 
+{   
+    position: relative;
+	width: 200px;
+	height: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	left:270px;
+	top:10px;
+	z-index:1;	
+}
+
+.menu 
+{     
+    background-image: url(Images/back_mid.gif);
+    background-repeat:repeat-y;
+	width: 780px;
+	height: 29px;	
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+.mid 
+{
+    display:table;
+	background-image: url(Images/back_mid.gif);
+	background-repeat: repeat-y;
+	width: 780px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.nav
+ { 
+    /*background-color:Aqua;*/
+	position: relative;
+	width: 160px;
+	left:11px;	
+	float:left;
+}
+.nav_Invisible
+ { 
+    display:none;
+}
+
+
+.content
+ {
+    /*background-color:Fuchsia;*/
+    float:left;    
+    left:11px;
+	position: relative;
+	width: 598px;
+    margin-left: auto;
+	margin-right: auto;
+}
+
+.content_navInvisible
+ {
+    text-align:left;
+    /*background-color:Fuchsia;*/
+    float:left;    
+    left:11px;
+	position: relative;
+	width: 758px;
+    margin-left: auto;
+	margin-right: auto;	
+}
+
+.footer 
+{ 
+	background-image: url(Images/footer.gif);
+	background-repeat:no-repeat;
+	background-position:bottom;
+	position: relative;
+	width: 780px;
+	height: 25px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+h1, h4 
+{	
+	font-size: 120%;
+	color: #5FAD42; 
+}
+
+
+h2 {
+	position: absolute;
+	left: 37px;
+	top: 60px;
+	font-size: 11px;
+	color: #5FAD42; 
+}
+
+.h5
+{
+	padding:0px;	
+	margin:0px;
+	margin-bottom:3px;
+	font-size:110%;
+	color: #5FAD42;
+	border-bottom : 1px solid #A9A9A9;
+}
+
+
+/* Search Results */
+.PageNumber
+{
+	font-weight:bold;
+	color:#5FAD42;
+	padding:2px;
+	font-size:120%;	
+	text-decoration:none;
+}
+
+a.PageNumber
+{
+	font-weight:normal;
+	color:#5FAD42;
+	padding:1px;
+	font-size:100%;	
+	text-decoration:none;
+}
+
+/* Search scroll bar */
+#searchWrap
+{    
+    PADDING-RIGHT: 1px;   
+    PADDING-LEFT: 1px;
+    PADDING-BOTTOM: 1px;    
+    PADDING-TOP: 0px;    
+    HEIGHT: 100px;
+    padding-top:3px;
+}
+
+#searchLeft
+{
+    background: url(images/SearchScrollLeft.gif);
+    background-repeat:no-repeat;
+    background-position: left top;
+    width:27px;    
+}
+
+#searchFill
+{
+    background: url(images/SearchScrollFiller.gif) repeat-x;
+}
+
+#searchRight
+{
+    background: url(images/SearchScrollRight.gif);
+    background-repeat:no-repeat;
+    background-position:left top;
+    width:27px;    
+}
+
+
+/* Toolbar buttons */
+div.ToolBar
+{
+    display:table-row;
+}
+span.ToolAdd, span.ToolEdit, span.ToolUp, span.ToolDown, span.ToolDelete, span.ToolFlag, span.ToolParking,span.ToolDog, span.ToolUtility, span.ToolPool, span.ToolClose
+{    
+    display:inline-block;
+    margin: 0px 1px 0px 1px;
+    width:14px;
+    height:14px;
+    border: solid 1px #AAAAAA;
+}
+
+span.ToolAdd {background-image: url(Images/Icons/add.gif);}
+span.ToolEdit {background-image: url(Images/Icons/edit.gif);}
+span.ToolUp {background-image: url(Images/Icons/up.gif);}
+span.ToolDown {background-image: url(Images/Icons/down.gif);}
+span.ToolDelete {background-image: url(Images/Icons/delete.gif);}
+span.ToolFlag {background-image: url(Images/Icons/flag.gif);}
+span.ToolParking {background-image: url(Images/Icons/parking.gif);}
+span.ToolDog {background-image: url(Images/Icons/dog.gif);}
+span.ToolUtility {background-image: url(Images/Icons/utility.gif);}
+span.ToolPool {background-image: url(Images/Icons/pool.gif);}
+span.ToolClose {background-image: url(Images/Icons/close.gif);}
+
+/* Misc */
+#loading
+{
+	text-align:center;
+	height:7000px;
+	font-size:16px;
+	padding-top: 120px;
+	color:Gray;
+}
+
+#noresults
+{
+	text-align:center;
+	height:50px;
+	font-size:16px;
+	padding-top: 30px;
+	color:Gray;
+}
+
+
+/* Main Page */
+#mainPageSearch
+{
+	position:absolute;
+	top:5px;
+	left:380px;
+}
+
+#featureTop
+{
+	height:40px;
+	width: 758px;
+	background-image: url(Images/FeatureTop.gif);	
+}
+
+#featureTitle
+{
+	position:relative;
+	font-size:140%;
+	left:5px;
+	top:23px;
+}
+
+
+#featureFill
+{
+	height:100px;
+	width:100%;
+	background-color: #eae9e9;
+}
+
+#featureBottom
+{
+	height:26px;
+	width: 100%;
+	background-image: url(Images/FeatureBottom.gif);	
+}
+
+.WatermarkText
+{
+	color:Gray;
+	font-size:100%;
+}
+
+.MainPageLabel
+{
+	font-size:135%;
+	color:Gray;
+}
+
+.MainPageError
+{
+	font-size:100%;
+	color:Red;
+}
+
+
+/* TEST */
+.modalBackground 
+{
+	position:absolute;
+	left:0px;
+	top:0px;
+	background-color:White;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+	width:100%;
+	display:none;
+}
+
+.modalBox 
+{
+	padding:5px;
+	background-color:#DDDDDD;
+	border: solid 1px #333333;
+	display:none;
+	z-index:1;	
+}
+
+.processingBox 
+{
+	color:Red;
+	padding:5px;
+	background-color:#DDDDDD;
+	border: solid 1px #333333;
+	display:none;
+	z-index:1;	
+}
+
+a.Tab, a.TabSelected
+{    
+	background-position:left top;
+    margin: 0px 1px 0px 1px;
+    width:164px;
+    height:17px;
+    text-align:center;
+    vertical-align:middle;
+    font-size:100%;        
+    padding-top:3px;
+    display:inline-block;
+    text-decoration:none;
+    color:#333333;    
+}
+a.Tab 
+{
+	background-image: url(Images/Tab.gif);
+}
+a.TabSelected 
+{
+	background-image: url(Images/TabSelected.gif);
+	font-weight:bold;
+}
+
+.ErrorText
+{
+	font-size:100%;
+	color:Red;
+	font-weight:bold;
+}
+
+#listingMap
+{
+	display:none;
+	overflow:hidden;
+	height:400px;
+	width:200px;
+}

@@ -1,0 +1,84 @@
+﻿#MainTitle
+{
+	height:255px;
+	width: 100%;
+	background-image: url(Images/Titles/MainTitle.gif);	
+}
+
+#AboutUsTitle
+{
+    background: url(Images/Titles/AboutUs.gif);
+    width:758px;
+    height:110px;
+}
+
+#SignUpTitle
+{
+    background: url(Images/Titles/SignUp.gif);
+    width:758px;
+    height:110px;
+}
+
+#ContactUsTitle
+{
+    background: url(Images/Titles/ContactUs.gif);
+    width:758px;
+    height:110px;
+}
+
+#FeedbackTitle
+{
+    background: url(Images/Titles/Feedback.gif);
+    width:758px;
+    height:110px;
+}
+
+#PartnerTitle
+{
+    background: url(Images/Titles/Partner.gif);
+    width:758px;
+    height:110px;
+}
+
+#SearchTitle
+{
+    background: url(Images/Titles/Search.gif);
+    width:758px;
+    height:110px;
+}
+
+#MyAccountTitle
+{
+    background: url(Images/Titles/MyAccount.gif);
+    width:758px;
+    height:110px;
+}
+
+#EditProfileTitle
+{
+    background: url(Images/Titles/EditProfile.gif);
+    width:758px;
+    height:110px;
+}
+
+#InboxTitle
+{
+    background: url(Images/Titles/Inbox.gif);
+    width:758px;
+    height:110px;
+}
+
+#ActivityTitle
+{
+    background: url(Images/Titles/Activity.gif);
+    width:758px;
+    height:110px;
+}
+
+#ErrorTitle
+{
+    background: url(Images/Titles/Error.gif);
+    width:758px;
+    height:110px;
+}
+

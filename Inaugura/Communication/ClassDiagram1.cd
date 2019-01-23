@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorVersion="1" MinorVersion="1" xmlns="http://www.microsoft.com/VisualStudio/EnterpriseTools/ClassDesigner/V1.1/DiagramSchema.xsd">
+  <View FilterFieldProperty="false" LastOpened="true" Name="Main">
+    <AbsoluteBounds X="0" Y="0" Height="8.5" Width="11" />
+    <Font Name="Tahoma" Size="0.1145833358168602" />
+    <Class Collapsed="false">
+      <AbsoluteBounds X="5" Y="0.5" Height="2.53503194441398" Width="2.25" />
+      <TypeIdentifier>
+        <FullName>Inaugura.Communication.Messaging.MessagePipe</FullName>
+        <FileName>Communication\Messaging\MessagePipe.cs</FileName>
+        <HashCode>AAAAAAAAACAAAAAAADAAAAAEAAAAAQAAAAAAgQSABAA=</HashCode>
+      </TypeIdentifier>
+      <Compartment Group="Kind" HasGroup="true" HeaderText="Fields" IsDefaultExpandCollapseState="false" />
+      <LollipopPosition Position="0.20000000000000018" />
+    </Class>
+    <Class Collapsed="false">
+      <AbsoluteBounds X="2.5" Y="0.5" Height="2.7016986110806465" Width="2" />
+      <TypeIdentifier>
+        <FullName>Inaugura.Communication.Messaging.MessagingNetwork</FullName>
+        <FileName>Communication\Messaging\MessagingNetwork.cs</FileName>
+        <HashCode>AAAAAAAAEAAAJAAAABBABAAAAAABAAAAACAAAACAEAA=</HashCode>
+      </TypeIdentifier>
+      <Compartment Group="Kind" HasGroup="true" HeaderText="Fields" IsDefaultExpandCollapseState="false" />
+    </Class>
+    <Class Collapsed="false">
+      <AbsoluteBounds X="6.5" Y="4.5" Height="2.368365277747313" Width="2.5" />
+      <TypeIdentifier>
+        <FullName>Inaugura.Communication.Messaging.TCPMessagePipe</FullName>
+        <FileName>Communication\Messaging\TCPMessagePipe.cs</FileName>
+        <HashCode>AAAAAAAAACAAAAAAACAgAAgIAAAAAQEAAAAABABAAAA=</HashCode>
+      </TypeIdentifier>
+      <Compartment Group="Kind" HasGroup="true" HeaderText="Fields" IsDefaultExpandCollapseState="false" />
+    </Class>
+    <Class Collapsed="false">
+      <AbsoluteBounds X="1.75" Y="4" Height="2.9842401149868962" Width="2.75" />
+      <TypeIdentifier>
+        <FullName>Inaugura.Communication.Messaging.TCPMessagingNetwork</FullName>
+        <FileName>Communication\Messaging\TCPMessagingNetwork.cs</FileName>
+        <HashCode>AgAAAAAAACAAIAAAABgCBAAAACAAEAABAAAIAECAAAA=</HashCode>
+      </TypeIdentifier>
+      <Compartment Group="Kind" HasGroup="true" HeaderText="Fields" IsDefaultExpandCollapseState="false" />
+      <LollipopPosition Position="0.19999999999999996" />
+    </Class>
+    <Interface Collapsed="false">
+      <AbsoluteBounds X="0.5" Y="0.5" Height="1.10011495222648" Width="1.5" />
+      <TypeIdentifier>
+        <FullName>Inaugura.Communication.Messaging.IMessageProcessor</FullName>
+        <FileName>Communication\Messaging\IMessageProcessor.cs</FileName>
+        <HashCode>AAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      </TypeIdentifier>
+    </Interface>
+  </View>
+</Diagram>

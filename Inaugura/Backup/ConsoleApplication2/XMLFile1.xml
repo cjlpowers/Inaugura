@@ -1,0 +1,10 @@
+﻿<User id="0a5454d8-c2bc-485b-a6c7-aa6c1dddf67c" creationDate="08/13/2006" type="Inaugura.RealLeads.User, Inaugura.RealLeads, Version=1.0.2668.23743, Culture=neutral, PublicKeyToken=null" firstName="Chris" lastName="Powers" email="cpowers@realleads.ca" phoneNumber="5197220632" lastLogin="04/29/2007 11:34:02" maxListings="1" maxImages="5" phoneNumberPrivate="True" emailVerified="True">
+  <Address />
+  <Password salt="1urqwQ==">pfWB11XNwCaQttFQaTRw6NQ4l0w=</Password>
+  <PasswordQuestion>What do I play?</PasswordQuestion>
+  <PasswordAnswer>fender</PasswordAnswer>
+  <Roles>
+    <Role name="Administrator" />
+    <Role name="WebsiteEditor" />
+  </Roles>
+</User>

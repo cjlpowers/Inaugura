@@ -1,0 +1,118 @@
+﻿#DefaultTitle
+{
+    background: url(Images/Titles/Default.gif);
+    width:758px;
+    height:110px;
+}
+
+#MainTitle
+{
+	height:350px;
+	width: 100%;
+	background-image: url(Images/Titles/MainTitle.jpg);	
+}
+
+#AboutUsTitle
+{
+    background: url(Images/Titles/AboutUs.gif);
+    width:758px;
+    height:110px;
+}
+
+#AdminTitle
+{
+    background: url(Images/Titles/AdminTitle.gif);
+    width:758px;
+    height:110px;
+}
+
+#CreateListingTitle
+{
+    background: url(Images/Titles/Create.gif);
+    width:758px;
+    height:110px;
+}
+
+#ContactUsTitle
+{
+    background: url(Images/Titles/ContactUs.gif);
+    width:758px;
+    height:110px;
+}
+
+#FeedbackTitle
+{
+    background: url(Images/Titles/Feedback.gif);
+    width:758px;
+    height:110px;
+}
+
+#PartnerTitle
+{
+    background: url(Images/Titles/Partner.gif);
+    width:758px;
+    height:110px;
+}
+
+#SearchTitle
+{
+    background: url(Images/Titles/Search.gif);
+    width:758px;
+    height:110px;
+}
+
+#EditProfileTitle
+{
+    background: url(Images/Titles/EditProfile.gif);
+    width:758px;
+    height:110px;
+}
+
+#ChangePasswordTitle
+{
+    background: url(Images/Titles/ChangePassword.gif);
+    width:758px;
+    height:110px;
+}
+
+#ForgotPasswordTitle
+{
+    background: url(Images/Titles/ForgotPassword.gif);
+    width:758px;
+    height:110px;
+}
+
+#InboxTitle
+{
+    background: url(Images/Titles/Inbox.gif);
+    width:758px;
+    height:110px;
+}
+
+#ActivityTitle
+{
+    background: url(Images/Titles/Activity.gif);
+    width:758px;
+    height:110px;
+}
+
+#ErrorTitle
+{
+    background: url(Images/Titles/Error.gif);
+    width:758px;
+    height:110px;
+}
+
+#LoginTitle
+{
+    background: url(Images/Titles/Login.gif);
+    width:758px;
+    height:110px;
+}
+
+#EmailVerificationTitle
+{
+    background: url(Images/Titles/EmailVerification.gif);
+    width:758px;
+    height:110px;
+}

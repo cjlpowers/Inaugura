@@ -1,0 +1,48 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PopupControl.master.cs"
+    Inherits="PopupControl" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="Styles/Div.css" type="text/css" rel="stylesheet" />
+    <link href="Styles/Main.css" type="text/css" rel="stylesheet" />
+    <link href="Styles/Layout.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="Styles/Layout_Print.css" type="text/css" rel="stylesheet" media="print" />
+    <link href="Styles/LoginForm.css" type="text/css" rel="stylesheet" />
+    <link href="Styles/Controls.css" type="text/css" rel="stylesheet" />
+    <link href="Styles/SideMenu.css" type="text/css" rel="stylesheet" />
+    <link href="Styles/RealLeads.css" type="text/css" rel="stylesheet" />
+    <link href="Controls/Menu/menu.css" type="text/css" rel="stylesheet" />
+    <link href="Styles/tableless.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+<body class="Popup">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager2" runat="server">
+            <Services>
+                <asp:ServiceReference Path="~/WebServices/ListingService.asmx" />
+            </Services>
+            <Scripts>
+                <asp:ScriptReference Name="PreviewScript.js" Assembly="Microsoft.Web.Preview" />
+                <asp:ScriptReference Path="~/script_01.js" />
+                <asp:ScriptReference Path="~/commands_01.js" />
+            </Scripts>
+        </asp:ScriptManager>
+        <div id="popupHeader">
+            <h1 id="popupTitle" runat="server"></h1>
+            <span title="Close" id="popupCloseButton" onclick="ClosePopup();"></span>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <asp:PlaceHolder ID="mErrorBox" runat="server" Visible="false" EnableViewState="false">
+            <div id="ErrorBox" class="PopupErrorBox">
+                <span class="ToolClose" style="position: absolute; top: 3px; right: 8px;" onclick="document.getElementById('ErrorBox').style.display='none';">
+                </span>
+                <div style="padding-right: 20px">
+                    <asp:Label ID="mLbError" runat="server" CssClass="ErrorText"></asp:Label>
+                </div>
+            </div>
+        </asp:PlaceHolder>
+    </form>
+</body>
+</html>

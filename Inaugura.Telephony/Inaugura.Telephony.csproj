@@ -1,0 +1,174 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.20706</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B2C75CA-42CA-44F7-8A6F-FFA589E307FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Inaugura.Telephony</RootNamespace>
+    <AssemblyName>Inaugura.Telephony</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\Inaugura.Telephony.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Emulation\Dlg.cs">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="Emulation\Engine.cs" />
+    <Compile Include="Emulation\Single Line\DialAnalysisDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emulation\Single Line\DialAnalysisDlg.Designer.cs">
+      <DependentUpon>DialAnalysisDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emulation\Single Line\DigitBuffer.cs" />
+    <Compile Include="Emulation\Single Line\WindowsHardware.cs" />
+    <Compile Include="Emulation\Single Line\WindowsLine.cs" />
+    <Compile Include="Emulation\Single Line\WindowsLineDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exceptions\CallerException.cs" />
+    <Compile Include="Exceptions\UserInputException.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Services\IncommingService.cs" />
+    <Compile Include="Services\IncommingServiceLine.cs" />
+    <Compile Include="Services\OutgoingService.cs" />
+    <Compile Include="Services\OutgoingServiceLine.cs" />
+    <Compile Include="Services\Service.cs" />
+    <Compile Include="Services\ServiceCollection.cs" />
+    <Compile Include="Services\ServiceCollectionDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\ServiceCollectionEditor.cs" />
+    <Compile Include="Services\ServiceLine.cs" />
+    <Compile Include="Services\ServiceLineCollection.cs" />
+    <Compile Include="Services\ServiceManager.cs" />
+    <Compile Include="Services\ServiceManagerEditor.cs" />
+    <Compile Include="Services\ServiceTypeConverter.cs" />
+    <Compile Include="Switch.cs" />
+    <Compile Include="CallerId.cs" />
+    <Compile Include="IStatusable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Emulation\Dlg.resx">
+      <DependentUpon>Dlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emulation\Single Line\DialAnalysisDlg.resx">
+      <DependentUpon>DialAnalysisDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emulation\Single Line\WindowsLineDlg.resx">
+      <DependentUpon>WindowsLineDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Resource1.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\ServiceCollectionDlg.resx">
+      <DependentUpon>ServiceCollectionDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\ServiceCollectionEditor.resx">
+      <DependentUpon>ServiceCollectionEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\ServiceManagerEditor.resx">
+      <DependentUpon>ServiceManagerEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HardwareSelectorDlg.resx">
+      <DependentUpon>HardwareSelectorDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emulation\TelephonyHardwareEditor.resx">
+      <DependentUpon>TelephonyHardwareEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelephonyManagerEditor.resx">
+      <DependentUpon>TelephonyManagerEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="GetHardwareDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exceptions\HangupException.cs" />
+    <Compile Include="HardwareSelectorDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exceptions\InvalidUserInputException.cs" />
+    <Compile Include="Language.cs" />
+    <Compile Include="LanguageList.cs" />
+    <Compile Include="Exceptions\NoResponseException.cs" />
+    <Compile Include="Exceptions\TelephonyException.cs" />
+    <Compile Include="TelephonyHardware.cs" />
+    <Compile Include="Emulation\TelephonyHardwareEditor.cs" />
+    <Compile Include="TelephonyLine.cs" />
+    <Compile Include="TelephonyLineCollection.cs" />
+    <Compile Include="TelephonyLineList.cs" />
+    <Compile Include="TelephonyManager.cs" />
+    <Compile Include="TelephonyManagerEditor.cs" />
+    <Compile Include="TelephonyManagerEditorDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Services\DateGrammer.xml" />
+    <Content Include="Services\DateGrammerFr.xml" />
+    <Content Include="Services\TimeGrammer.xml" />
+    <Content Include="Services\TimeGrammerFr.xml" />
+    <Content Include="Services\TimeGrammerOrigional.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inaugura\Inaugura.csproj">
+      <Project>{7868A321-48B1-4854-A365-3DB5BE40F75E}</Project>
+      <Name>Inaugura</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

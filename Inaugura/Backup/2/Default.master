@@ -1,0 +1,71 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="_Default" %>
+<%@ Register Src="Controls/ContentControl.ascx" TagName="ContentControl" TagPrefix="uc5" %>
+<%@ Register Src="Controls/MenuBar.ascx" TagName="MenuBar" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=5"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager2" runat="server">
+            <Services>
+                <asp:ServiceReference Path="~/WebServices/ListingService.asmx" />
+            </Services>
+            <Scripts>
+                <asp:ScriptReference Path="~/script_01.js" />
+                <asp:ScriptReference Path="~/commands_01.js" />
+                <asp:ScriptReference Path="~/ScriptLibrary/prototype.lite.js" />
+                <asp:ScriptReference Path="~/ScriptLibrary/moo.fx.js" />
+                <asp:ScriptReference Path="~/ScriptLibrary/scroll.js" />
+            </Scripts>
+        </asp:ScriptManager>
+        <div id="loginBox">
+            <asp:LoginView ID="LoginView2" runat="server">
+                <AnonymousTemplate>
+                    <!--<a href="Register.aspx">Register</a>-->
+                </AnonymousTemplate>
+                <LoggedInTemplate>
+                    <asp:Label ID="mLbWelcome" runat="server"></asp:Label><span> l </span>
+                </LoggedInTemplate>
+            </asp:LoginView>
+            <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggedOut="LoginStatus1_LoggedOut"
+                LogoutAction="Redirect" LogoutPageUrl="~/Default.aspx" />
+        </div>
+        <div class="pageHeader">
+            <asp:ContentPlaceHolder ID="mPlaceHolderHeader" runat="server">
+                <uc5:ContentControl ID="mContentHeader" runat="server" EnableViewState="false" />
+<%--                           <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+           <ProgressTemplate>
+                <span class="Progress">Processing...</span>
+           </ProgressTemplate>
+           </asp:UpdateProgress>--%>
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="mid" id="mid">
+            <div class="MenuHolder">
+                <uc1:MenuBar ID="MenuBar1" runat="server" />
+            </div>
+            <asp:PlaceHolder ID="mMessageBox" runat="server" Visible="false">
+                <div id="MessageBox" class="MessageBox">
+                    <span class="ToolClose" style="position: absolute; top: 3px; right: 8px;" onclick="document.getElementById('MessageBox').style.display='none';">
+                    </span>
+                    <div style="padding-right: 20px">
+                        <asp:Label ID="mLbMessage" runat="server" CssClass="ErrorText"></asp:Label>
+                    </div>
+                </div>
+            </asp:PlaceHolder>
+            <div class="content" runat="server" id="mContent">
+                <uc5:ContentControl ID="mContentBody" runat="server" EnableViewState="false" />
+                <asp:ContentPlaceHolder ID="mPlaceHolderBody" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="pageFooter">
+            <asp:ContentPlaceHolder ID="mPlaceHolderFooter" runat="server">
+                <uc5:ContentControl ID="mContentFooter" runat="server" EnableViewState="false" />
+            </asp:ContentPlaceHolder></div>
+    </form>
+</body>
+</html>

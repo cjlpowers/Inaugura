@@ -1,0 +1,349 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+
+public partial class Zones : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {        
+           
+    }
+
+    protected void Page_Init(object sender, EventArgs e)
+    {
+        this.Title = Helper.Configuration.Title + "Administration - Zone Management";
+
+        if (!this.IsPostBack)
+        {
+            this.FillZones();
+            this.FillCountries();
+        }
+    }
+
+    
+
+    #region Countries
+    private void FillCountries()
+    {
+        this.mLstCountries.Items.Clear();
+        Inaugura.Country[] countries = DataHelper.InauguraDataStore.ZoneStore.GetCountries();
+
+        foreach (Inaugura.Country country in countries)
+        {
+            ListItem item = new ListItem(country.Name, country.ID);
+            this.mLstCountries.Items.Add(item);
+        }
+    }
+
+    protected void mLstCountries_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        this.FillProvinces(this.mLstCountries.SelectedValue);
+    }
+
+    protected void mBtnNewCountry_Click(object sender, EventArgs e)
+    {
+        this.mRowCreateCountry.Visible = true;
+        this.mRowCountryOptions.Visible = false;
+    }
+
+    protected void mBtnDeleteCountry_Click(object sender, EventArgs e)
+    {
+        string countryID = this.mLstCountries.SelectedValue;
+        DataHelper.InauguraDataStore.ZoneStore.RemoveCountry(countryID);
+        this.FillCountries();
+    }
+
+    protected void mBtnCountryCreate_Click(object sender, EventArgs e)
+    {
+        // make sure a name has been specified
+        if (this.mTxtCountryName.Text.Length > 0)
+        {
+            Inaugura.Country country = new Inaugura.Country(this.mTxtCountryName.Text);
+            DataHelper.InauguraDataStore.ZoneStore.AddCountry(country);
+            this.FillCountries();
+        }
+        this.mRowCreateCountry.Visible = false;
+        this.mRowCountryOptions.Visible = true;
+    }
+
+    protected void mBtnCountryCancel_Click(object sender, EventArgs e)
+    {
+        this.mRowCreateCountry.Visible = false;
+        this.mRowCountryOptions.Visible = true;
+    }
+    #endregion
+
+    #region Provinces
+    private void FillProvinces(string countryID)
+    {
+        this.mLstProvinces.Items.Clear();
+        Inaugura.Province[] provinces = DataHelper.InauguraDataStore.ZoneStore.GetProvinces(countryID);
+
+        foreach (Inaugura.Province province in provinces)
+        {
+            ListItem item = new ListItem(province.Name, province.ID);
+            this.mLstProvinces.Items.Add(item);
+        }
+
+        this.FillRegions(this.mLstProvinces.SelectedValue);
+    }
+
+    protected void mBtnNewProvince_Click(object sender, EventArgs e)
+    {
+        this.mRowCreateProvince.Visible = true;
+        this.mRowProvinceOptions.Visible = false;
+    }
+
+    protected void mBtnDeleteProvince_Click(object sender, EventArgs e)
+    {
+        string provinceID = this.mLstProvinces.SelectedValue;
+        DataHelper.InauguraDataStore.ZoneStore.RemoveProvince(provinceID);
+        this.FillProvinces(this.mLstCountries.SelectedValue);
+    }
+
+    protected void mBtnProvinceAdd_Click(object sender, EventArgs e)
+    {
+        // make sure a name has been specified
+        if (this.mTxtProvinceName.Text.Length > 0)
+        {
+            Inaugura.Province province = new Inaugura.Province(this.mTxtProvinceName.Text, this.mLstCountries.SelectedValue);
+            DataHelper.InauguraDataStore.ZoneStore.AddProvince(province);
+            this.FillProvinces(this.mLstCountries.SelectedValue);
+        }
+        this.mRowCreateProvince.Visible = false;
+        this.mRowProvinceOptions.Visible = true;
+    }
+
+    protected void mBtnProvinceCancel_Click(object sender, EventArgs e)
+    {
+        this.mRowCreateProvince.Visible = false;
+        this.mRowProvinceOptions.Visible = true;
+    }
+
+    protected void mLstProvinces_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        this.FillRegions(this.mLstProvinces.SelectedValue);
+    }
+    #endregion
+
+    #region Regions
+    private void FillRegions(string provinceID)
+    {
+        this.mLstRegions.Items.Clear();
+        Inaugura.Region[] regions = DataHelper.InauguraDataStore.ZoneStore.GetRegions(provinceID);
+
+        foreach (Inaugura.Region region in regions)
+        {
+            ListItem item = new ListItem(region.Name, region.ID);
+            this.mLstRegions.Items.Add(item);
+        }
+
+        this.FillCities(this.mLstProvinces.SelectedValue);
+    }
+
+    protected void mBtnNewRegion_Click(object sender, EventArgs e)
+    {
+        this.mRowRegionOptions.Visible = false;
+        this.mRowCreateRegion.Visible = true;
+    }
+
+    protected void mBtnDeleteRegion_Click(object sender, EventArgs e)
+    {
+        string regionID = this.mLstRegions.SelectedValue;
+        DataHelper.InauguraDataStore.ZoneStore.RemoveRegion(regionID);
+        this.FillRegions(this.mLstProvinces.SelectedValue);
+    }
+
+
+    protected void mBtnRegionAdd_Click(object sender, EventArgs e)
+    {
+        // make sure a name has been specified
+        if (this.mTxtRegionName.Text.Length > 0)
+        {
+            Inaugura.Region region = new Inaugura.Region(this.mTxtRegionName.Text, this.mLstProvinces.SelectedValue);
+            DataHelper.InauguraDataStore.ZoneStore.AddRegion(region);
+            this.FillRegions(this.mLstProvinces.SelectedValue);
+        }
+        this.mRowCreateRegion.Visible = false;
+        this.mRowRegionOptions.Visible = true;
+    }
+
+    protected void mLstRegions_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        this.FillCities(this.mLstRegions.SelectedValue);
+    }
+
+    protected void mBtnRegionCancel_Click(object sender, EventArgs e)
+    {
+        this.mRowCreateRegion.Visible = false;
+        this.mRowRegionOptions.Visible = true;
+    }
+    #endregion
+
+    #region Cities
+    private void FillCities(string regionID)
+    {
+        this.mLstCities.Items.Clear();
+        Inaugura.City[] cities = DataHelper.InauguraDataStore.ZoneStore.GetCities(regionID);
+
+        foreach (Inaugura.City city in cities)
+        {
+            ListItem item = new ListItem(city.Name, city.ID);
+            this.mLstCities.Items.Add(item);
+        }
+
+        this.FillDistricts(this.mLstCities.SelectedValue);
+    }
+
+    protected void mBtnNewCity_Click(object sender, EventArgs e)
+    {
+        this.mRowCityOptions.Visible = false;
+        this.mRowCreateCity.Visible = true;
+    }
+
+    protected void mBtnDeleteCity_Click(object sender, EventArgs e)
+    {
+        string cityID = this.mLstCities.SelectedValue;
+        DataHelper.InauguraDataStore.ZoneStore.RemoveCity(cityID);
+        this.FillCities(this.mLstRegions.SelectedValue);
+    }
+
+    protected void mBtnCityAdd_Click(object sender, EventArgs e)
+    {
+        // make sure a name has been specified
+        if (this.mTxtCityName.Text.Length > 0)
+        {
+            Inaugura.City city = new Inaugura.City(this.mTxtCityName.Text, this.mLstRegions.SelectedValue);
+            DataHelper.InauguraDataStore.ZoneStore.AddCity(city);
+            this.FillCities(this.mLstRegions.SelectedValue);
+        }
+        this.mRowCreateCity.Visible = false;
+        this.mRowCityOptions.Visible = true;
+    }
+
+    protected void mBtnCityCancel_Click(object sender, EventArgs e)
+    {
+        this.mRowCreateCity.Visible = false;
+        this.mRowCityOptions.Visible = true;
+    }
+
+    protected void mLstCities_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        this.FillDistricts(this.mLstCities.SelectedValue);
+    }
+    #endregion
+
+    #region Districts
+    private void FillDistricts(string cityID)
+    {
+        this.mLstDistricts.Items.Clear();
+        Inaugura.District[] districts = DataHelper.InauguraDataStore.ZoneStore.GetDistricts(cityID);
+
+        foreach (Inaugura.District district in districts)
+        {
+            ListItem item = new ListItem(district.Name, district.ID);
+            this.mLstDistricts.Items.Add(item);
+        }
+    }
+
+    protected void mBtnNewDistrict_Click(object sender, EventArgs e)
+    {
+        this.mRowDistrictOptions.Visible = false;
+        this.mRowCreateDistrict.Visible = true;
+
+        // fill the districts drop down
+		this.FillZonesDropDown();
+    }
+
+    protected void mBtnDeleteDistrict_Click(object sender, EventArgs e)
+    {
+        string districtID = this.mLstDistricts.SelectedValue;
+        DataHelper.InauguraDataStore.ZoneStore.RemoveDistrict(districtID);
+        this.FillDistricts(this.mLstCities.SelectedValue);
+    }
+
+    protected void mBtnDistrictAdd_Click(object sender, EventArgs e)
+    {
+        // make sure a name has been specified
+        if (this.mTxtDistrictName.Text.Length > 0)
+        {
+            Inaugura.District district = new Inaugura.District(this.mTxtDistrictName.Text, this.mLstCities.SelectedValue,this.mDlZones.SelectedValue);
+            DataHelper.InauguraDataStore.ZoneStore.AddDistrict(district);
+            this.FillDistricts(this.mLstCities.SelectedValue);
+        }
+        this.mRowDistrictOptions.Visible = true;
+        this.mRowCreateDistrict.Visible = false;
+    }
+    protected void mBtnDistrictCancel_Click(object sender, EventArgs e)
+    {
+        this.mRowDistrictOptions.Visible = true;
+        this.mRowCreateDistrict.Visible = false;
+    }
+    #endregion
+
+    #region Zones
+    private void FillZones()
+    {
+        this.mLstZones.Items.Clear();
+        Inaugura.Zone[] zones = DataHelper.InauguraDataStore.ZoneStore.GetZones();
+
+        foreach (Inaugura.Zone zone in zones)
+        {
+            ListItem item = new ListItem(zone.Name, zone.ID);
+            this.mLstZones.Items.Add(item);
+        }
+    }
+
+    private void FillZonesDropDown()
+    {
+        this.mDlZones.Items.Clear();
+        Inaugura.Zone[] zones = DataHelper.InauguraDataStore.ZoneStore.GetZones();
+
+        foreach (Inaugura.Zone zone in zones)
+        {
+            ListItem item = new ListItem(zone.Name, zone.ID);
+            this.mDlZones.Items.Add(item);
+        }
+    }
+
+    protected void mBtnNewZone_Click(object sender, EventArgs e)
+    {
+        this.mRowZoneOptions.Visible = false;
+        this.mRowCreateZone.Visible = true;
+    }
+
+    protected void mBtnZoneAdd_Click(object sender, EventArgs e)
+    {
+        // make sure a name has been specified
+        if (this.mTxtZoneName.Text.Length > 0)
+        {
+            Inaugura.Zone zone = new Inaugura.Zone(this.mTxtZoneName.Text);
+            DataHelper.InauguraDataStore.ZoneStore.AddZone(zone);
+            this.FillZones();
+        }
+        this.mRowZoneOptions.Visible = true;
+        this.mRowCreateZone.Visible = false;
+    }
+
+    protected void mBtnZoneCancel_Click(object sender, EventArgs e)
+    {
+        this.mRowZoneOptions.Visible = true;
+        this.mRowCreateZone.Visible = false;
+    }
+
+    protected void mBtnDeleteZone_Click(object sender, EventArgs e)
+    {
+        string zoneID = this.mLstZones.SelectedValue;
+        DataHelper.InauguraDataStore.ZoneStore.RemoveZone(zoneID);
+        this.FillZones();
+    }
+    #endregion    
+  
+}

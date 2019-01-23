@@ -1,0 +1,67 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{392290A2-4907-427E-BDE7-CD65BDE4161D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OrbisTel.Services.RealLeads</RootNamespace>
+    <AssemblyName>OrbisTel.Services.RealLeads</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentCallHandler.cs" />
+    <Compile Include="CallHandler.cs" />
+    <Compile Include="ClientCallHandler.cs" />
+    <Compile Include="ListingSetupCallHandler.cs" />
+    <Compile Include="PromptNotFoundException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealLeadsIncommingLine.cs" />
+    <Compile Include="RealLeadsService.cs" />
+    <Compile Include="ResourceLoader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inaugura.RealLeads\Inaugura.RealLeads.csproj">
+      <Project>{BFED6F5B-2F66-4FE0-B727-EFF461DE0261}</Project>
+      <Name>Inaugura.RealLeads</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inaugura.Telephony\Inaugura.Telephony.csproj">
+      <Project>{6B2C75CA-42CA-44F7-8A6F-FFA589E307FC}</Project>
+      <Name>Inaugura.Telephony</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inaugura\Inaugura.csproj">
+      <Project>{7868A321-48B1-4854-A365-3DB5BE40F75E}</Project>
+      <Name>Inaugura</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

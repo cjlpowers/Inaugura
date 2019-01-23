@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<DiagramLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ex:showrelationlabel="False" ViewPortX="264" ViewPortY="-21" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
+  <Shapes>
+    <Shape ID="DesignTable:Companies" ZOrder="29" X="368" Y="-20" Height="74" SplitterPosition="70" Width="150" />
+    <Shape ID="DesignTable:Zones" ZOrder="28" X="866" Y="120" Height="58" SplitterPosition="54" Width="150" />
+    <Shape ID="DesignTable:Agents" ZOrder="17" X="517" Y="363" Height="106" SplitterPosition="102" Width="150" />
+    <Shape ID="DesignTable:Listings" ZOrder="2" X="730" Y="325" Height="90" SplitterPosition="86" Width="150" />
+    <Shape ID="DesignTable:VoiceMail" ZOrder="8" X="779" Y="593" Height="106" SplitterPosition="102" Width="150" />
+    <Shape ID="DesignTable:AgentPhoneLookup" ZOrder="5" X="570" Y="238" Height="58" SplitterPosition="54" Width="157" />
+    <Shape ID="DesignTable:VoiceMailFiles" ZOrder="7" X="1008" Y="591" Height="106" SplitterPosition="102" Width="150" />
+    <Shape ID="DesignTable:AgentPrefixLookup" ZOrder="16" X="504" Y="536" Height="74" SplitterPosition="70" Width="155" />
+    <Shape ID="DesignTable:ListingLookup" ZOrder="11" X="1080" Y="357" Height="90" SplitterPosition="86" Width="150" />
+    <Shape ID="DesignTable:ListingFiles" ZOrder="10" X="1090" Y="474" Height="106" SplitterPosition="102" Width="150" />
+    <Shape ID="DesignTable:ListingCallLog" ZOrder="9" X="911" Y="429" Height="74" SplitterPosition="70" Width="150" />
+    <Shape ID="DesignTable:CompanyFiles" ZOrder="13" X="757" Y="-41" Height="106" SplitterPosition="102" Width="150" />
+    <Shape ID="DesignTable:AgentFiles" ZOrder="15" X="305" Y="498" Height="106" SplitterPosition="102" Width="150" />
+    <Shape ID="DesignTable:CompanyPhoneLookup" ZOrder="27" X="559" Y="38" Height="58" SplitterPosition="54" Width="175" />
+    <Shape ID="DesignTable:Customers" ZOrder="26" X="343" Y="180" Height="122" SplitterPosition="118" Width="150" />
+  </Shapes>
+  <Connectors>
+    <Connector ID="DesignRelation:FK_Customers_Agents" ZOrder="25" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>396</X>
+          <Y>302</Y>
+        </Point>
+        <Point>
+          <X>396</X>
+          <Y>403</Y>
+        </Point>
+        <Point>
+          <X>517</X>
+          <Y>403</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_RealEstateAgents_RealEstateListings" ZOrder="12" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>667</X>
+          <Y>389</Y>
+        </Point>
+        <Point>
+          <X>730</X>
+          <Y>389</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_RealEstateAgents_VoiceMail" ZOrder="4" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>667</X>
+          <Y>445</Y>
+        </Point>
+        <Point>
+          <X>684</X>
+          <Y>445</Y>
+        </Point>
+        <Point>
+          <X>684</X>
+          <Y>593</Y>
+        </Point>
+        <Point>
+          <X>779</X>
+          <Y>593</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_Agents_AgentPhoneLookup" ZOrder="19" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>618</X>
+          <Y>363</Y>
+        </Point>
+        <Point>
+          <X>618</X>
+          <Y>296</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_VoiceMail_VoiceMailFiles" ZOrder="6" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>929</X>
+          <Y>635</Y>
+        </Point>
+        <Point>
+          <X>1008</X>
+          <Y>635</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_Agents_AgentPrefixLookup" ZOrder="24" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>586</X>
+          <Y>469</Y>
+        </Point>
+        <Point>
+          <X>586</X>
+          <Y>536</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_Listings_ListingLookup" ZOrder="18" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>880</X>
+          <Y>381</Y>
+        </Point>
+        <Point>
+          <X>1080</X>
+          <Y>381</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_Listings_ListingFiles" ZOrder="23" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>829</X>
+          <Y>415</Y>
+        </Point>
+        <Point>
+          <X>829</X>
+          <Y>529</Y>
+        </Point>
+        <Point>
+          <X>1090</X>
+          <Y>529</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_Listings_ListingCallLog" ZOrder="22" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>863</X>
+          <Y>415</Y>
+        </Point>
+        <Point>
+          <X>863</X>
+          <Y>455</Y>
+        </Point>
+        <Point>
+          <X>911</X>
+          <Y>455</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_Companies_CompanyFiles" ZOrder="21" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>518</X>
+          <Y>-7</Y>
+        </Point>
+        <Point>
+          <X>757</X>
+          <Y>-7</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_Agents_AgentFiles" ZOrder="20" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>534</X>
+          <Y>469</Y>
+        </Point>
+        <Point>
+          <X>534</X>
+          <Y>515</Y>
+        </Point>
+        <Point>
+          <X>455</X>
+          <Y>515</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_Companies_CompanyPhoneLookup" ZOrder="14" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>518</X>
+          <Y>51</Y>
+        </Point>
+        <Point>
+          <X>559</X>
+          <Y>51</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_Zones_ListingLookup" ZOrder="3" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>999</X>
+          <Y>178</Y>
+        </Point>
+        <Point>
+          <X>999</X>
+          <Y>307</Y>
+        </Point>
+        <Point>
+          <X>1107</X>
+          <Y>307</Y>
+        </Point>
+        <Point>
+          <X>1107</X>
+          <Y>357</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_Companies_Customers" ZOrder="1" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>430</X>
+          <Y>54</Y>
+        </Point>
+        <Point>
+          <X>430</X>
+          <Y>180</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+  </Connectors>
+</DiagramLayout>

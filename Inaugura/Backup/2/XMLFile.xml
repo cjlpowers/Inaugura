@@ -1,0 +1,82 @@
+<Listing type="Inaugura.RealLeads.RentalPropertyListing, Inaugura.RealLeads, Version=1.0.2733.40600, Culture=neutral, PublicKeyToken=null" id="30f2df66-c83e-4f59-80d6-a21ce8f06a6a" code="1000" userId="0a5454d8-c2bc-485b-a6c7-aa6c1dddf67c" expiration="04/29/2007" status="2" numberOfBedrooms="2" numberOfBathrooms="1" monthlyRent="501" availabilityStart="06/01/2007" availabilityEnd="06/24/2007" parkingSpaces="2" parkingIncluded="True" pets="True" includesElectricity="True" includesHeating="True" laundryService="True" internetService="True">
+  <Title>Listing 1000</Title>
+  <Description>
+    <p>
+      With just a few days to go before launch, Apple has apparently lifted its embargo on the lucky few journos to get their hands on an iPhone a couple weeks early, and David Pogue, Walt Mossberg and USA Today's Edward C. Baig are doing the first honors. And honors abound: three out of three reviewers agree that the iPhone is pretty much the sexiest phone to ever hit the market, and there was no small amount of praise for the high resolution screen, svelte form factor and sturdy construction -- nano scratchers rejoice, nobody managed to make a mark on this thing. The iPhone turns out to be a bit of conundrum, excelling and even revolutionizing certain phone functions, while utterly failing at others. First the bad: call quality is only average, and AT&amp;T's weak sauce signal wasn't doing the iPhone any favors. It also can be a rather multi-step affair to even make a call, since there's no home screen speed dial or voice recognition, and the phonebook can't be searched, only scrolled through. Other failings like the lack of MMS, IM chat and video recording are even more mysterious. And that EDGE data? Pogue found himself longing for the days of dial-up, while waiting 1-2 minutes for popular sites to load, and while WiFi was quick to save the day in many instances, that's hardly an excuse in the year 2007. Luckily, there's plenty to love about this new approach to phoning, like an excellent web browser, mail client, visual voicemail and Cover Flow-enhanced iPod functions -- they're what Apple has been tooting its horn about, and they all seem to work as advertised. The keyboard more or less requires "faith" in the word auto-correction, an Apple rep likened it to using The Force, and while all three reviewers were able to get up to speed sooner or later, it's most certainly agreed that this is no BlackBerry-killer. Battery life was a non-issue, outstripping most smartphones, and nearly meeting Apple's predictions.
+    </p>
+  </Description>
+  <Features>
+    <Item>Parking</Item>
+    <Item>You can use variations of this same basic technique to create many different navigation bar effects, including the popular "folder tab" look.</Item>
+  </Features>
+  <Images defaultImage="4e3d9025-c18c-46cb-8a5e-b47b9927171f">
+    <Image id="4e3d9025-c18c-46cb-8a5e-b47b9927171f" fileId="46479b7b-d626-4356-9bd5-3080b80d12e1" name="" />
+    <Image id="70ca8383-dec3-411f-a2e5-b3440dfa882f" fileId="1fcd8626-6937-4da5-b2dc-76f3cc81c528" name="" />
+    <Image id="84af3533-9ff7-47b9-ba72-57d6113c7d46" fileId="e274f388-340c-4ee0-b2d5-abd118717754" name="" />
+    <Image id="e7d158bc-0d50-4aa8-89b9-0d19ca1569a8" fileId="47452c5a-0f15-4f78-9a15-a094a658780f" name="" />
+    <Image id="845b7174-b28b-433f-b157-aacd7867541c" fileId="57d645ad-8984-43da-ab0f-656d5e008c7f" name="" />
+    <Image id="b71f15d9-33c8-4af6-9cf7-50ca4c4dadf0" fileId="1e91a95d-215b-48de-b0cc-f298989f38af" name="" />
+    <Image id="a6677cf9-2ff8-4f02-9689-2a30b1d0e007" fileId="e2a402b3-8730-4008-83e3-c667ff9cad72" name="" />
+    <Image id="dfcce841-3e52-4f0f-bcb7-82950f2a346b" fileId="8d4f3a5e-b799-4c14-ba5e-d8d80725f6c2" name="" />
+    <Image id="6869cff6-4e28-4586-8b69-05aef02b92a1" fileId="b4359bf0-2f00-4adb-984b-cee338eb629b" name="" />
+  </Images>
+  <Directions></Directions>
+  <Size valueStdUnit="185.80608" value="2000" unit="Square Feet" symbol="ft²" />
+  <Address street="363 Fifth Ave" city="Ottawa" stateProv="Ontario" country="Canada" zipPostal="K1S2N6" latitude="45.39845" longitude="-75.69612" countryID="995c7a40-71ea-423f-86f6-6daf8c25dae2" stateProvID="b248ff4b-9f19-4921-8e37-7dfd1f5f518b" cityID="3b0b943b-50b1-47ce-b355-5912c8cf5fb5" />
+  <Lot>
+    <Description>The description</Description>
+    <Size valueStdUnit="250" value="250" unit="Square Meter" symbol="m²" />
+    <Features>
+      <Item>New Grass</Item>
+      <Item>Patio</Item>
+    </Features>
+  </Lot>
+  <Levels>
+    <Level id="ec2e9a26-2234-4220-960b-963634754700" name="Main Level" aboveGrade="True">
+      <Description>The main level of the house</Description>
+      <Size value="700" unit="Square Feet" symbol="ft²" />
+      <Features>
+        <Item>Large Windows</Item>
+      </Features>
+      <Rooms count="3">
+        <Room id="449067f3-1c50-4738-8880-622345779fba" name="Bedroom 1">
+          <RoomType>2</RoomType>
+          <Description>The main bedroom</Description>
+          <Dimensions>
+            <Width value="10" unit="Feet" symbol="ft" />
+            <Depth value="10" unit="Feet" symbol="ft" />
+          </Dimensions>
+          <FloorMaterial>1</FloorMaterial>
+        </Room>
+        <Room id="b2451992-ae2f-4488-9961-0fa290c5259d" name="Bathroom">
+          <RoomType>1</RoomType>
+          <Description>The main washroom</Description>
+          <Dimensions>
+            <Width value="5" unit="Feet" symbol="ft" />
+            <Depth value="5" unit="Feet" symbol="ft" />
+          </Dimensions>
+          <FloorMaterial>5</FloorMaterial>
+        </Room>
+        <Room id="1c5a885e-a2ee-4d3a-8bf8-61cfff5c6b1e" name="Bedroom 2">
+          <RoomType>2</RoomType>
+          <Description>The second bedroom</Description>
+          <Dimensions>
+            <Width value="10" unit="Feet" symbol="ft" />
+            <Depth value="10" unit="Feet" symbol="ft" />
+          </Dimensions>
+          <FloorMaterial>2</FloorMaterial>
+          <Features>
+            <Item>Some feature</Item>
+            <Item>Another Feature</Item>
+          </Features>
+        </Room>
+      </Rooms>
+    </Level>
+  </Levels>
+  <Appliances>
+    <Item>Washing Machine</Item>
+    <Item>TV</Item>
+  </Appliances>
+  <RentalPropertyType>2</RentalPropertyType>
+  <FurnishingType>2</FurnishingType>
+</Listing>

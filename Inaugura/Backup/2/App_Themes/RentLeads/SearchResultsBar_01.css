@@ -1,0 +1,111 @@
+﻿
+#searchResultsBar
+{
+	background: #2867ae url('Images/searchResultsBottomShadow.gif') repeat-x bottom;	
+	padding-bottom:5px;
+}
+
+#searchResultsBar h1
+{
+	margin:0px 3px 3px 25px;
+	padding:3px;
+	color:White;
+}
+
+#searchResultsContent
+{
+	display:none;
+	padding-bottom:10px;
+}
+
+#mapHolder
+{
+	height: 300px;
+	display:none;
+	margin:5px;
+	border:solid 2px white;
+}
+
+span.Progress
+{    
+    display:inline-block;
+    margin: 0px 1px 0px 1px;      
+    padding-left:30px;
+    height:14px;
+    background-image: url(Images/Progress01.gif);
+}
+
+
+a.searchResultsShow,
+a.searchResultsHide
+{
+	float:right;
+	display:inline-block;
+    margin:2px;      
+    padding-left:20px;
+    height:20px;
+    padding-top:0px;
+    text-decoration:none;
+    position:absolute;
+    left:5px;
+    top:0px;
+    cursor:pointer;
+}
+
+a.searchResultsShow {background: url(Images/Icons/searchResultsShow.gif) no-repeat;}
+a.searchResultsHide {background: url(Images/Icons/searchResultsHide.gif) no-repeat;}
+
+
+td.miniImage
+{
+	background: #2867ae url('Images/miniPhotoBg.jpg') no-repeat;
+	width:100px;
+	height:80px;
+	text-align:center;
+}
+
+.miniImage img
+{
+	position:relative;
+	top:-1px;
+	border: solid 1px #DDDDDD;
+}
+
+table.Mini
+{
+	max-width:231px;
+	width: 231px; 
+	cursor: pointer; 
+	height: 100px;
+	color:white;	
+	border-right: dotted 1px white;
+	margin:2px;
+}
+
+table.Mini:hover
+{
+	color:yellow;
+}
+
+table.Mini th
+{
+	font-size:130%;
+}
+
+table.Mini span.cost
+{
+	font-size:140%;
+	font-weight:bold;
+}
+
+table.Mini span.label
+{
+	font-weight:bold;
+	padding-right:4px;
+}
+
+table.Mini span.dist
+{
+	font-size:70%;
+	font-weight:normal;
+}

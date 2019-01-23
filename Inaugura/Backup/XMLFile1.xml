@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ErrorInformation type="Inaugura.RealLeads.Administration.ErrorInformation, Inaugura.RealLeads, Version=1.0.2338.1116, Culture=neutral, PublicKeyToken=null" id="1275bf06-7068-45f5-b1b0-76e0632787f4" status="0" time="2006-05-27T07:11:45.7188750Z">
+  <Message>
+    System.Web.HttpUnhandledException: Exception of type 'System.Web.HttpUnhandledException' was thrown. ---&gt; System.ApplicationException: The listing was not of type RealEstateListing
+    at EditListing.get_Listing() in e:\Dev\wwwroot\RealLeads\Secure\PopupControls\EditListing.aspx.cs:line 23
+    at EditListing.Page_Load(Object sender, EventArgs e) in e:\Dev\wwwroot\RealLeads\Secure\PopupControls\EditListing.aspx.cs:line 35
+    at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+    at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+    at System.Web.UI.Control.OnLoad(EventArgs e)
+    at System.Web.UI.Control.LoadRecursive()
+    at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+    --- End of inner exception stack trace ---
+    at System.Web.UI.Page.HandleError(Exception e)
+    at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+    at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+    at System.Web.UI.Page.ProcessRequest()
+    at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+    at System.Web.UI.Page.ProcessRequest(HttpContext context)
+    at ASP.secure_popupcontrols_editlisting_aspx.ProcessRequest(HttpContext context) in c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\realleads\576c19ed\894804a9\App_Web_6wyfy_v7.6.cs:line 0
+    at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+    at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)
+  </Message>
+  <Details>
+    <Detail key="RequestUrl">http://localhost:4365/RealLeads/Secure/PopupControls/EditListing.aspx?listingId=13b24469-c26f-4fb0-bdbb-888cdb1f676c</Detail>
+    <Detail key="AgentID">c285eb09-dfe3-476c-b43a-fedd8eba5f7f</Detail>
+  </Details>
+</ErrorInformation>

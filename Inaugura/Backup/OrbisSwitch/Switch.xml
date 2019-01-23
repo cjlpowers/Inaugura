@@ -1,0 +1,22 @@
+<Switch type="OrbisTel.Switches.Switch" id="" name="">
+	<ServiceManager type="OrbisTel.Services.ServiceManager">
+		<Services>
+			<Service type="OrbisTel.Services.TestService.TestService" assembly="OrbisTel.Services.TestService, Version=1.0.1612.1141, Culture=neutral, PublicKeyToken=null" id="Test Service Id" name="Test Service" importance="0" idealIdleSeconds="10" minimumLines="1" maximumLines="20">
+				<ReservedLines />
+				<FileReferenceList>
+					<FileReference name="OrbisTel.Services.TestService.dll" version="1.0.1612.1141" folder="Services" />
+				</FileReferenceList>
+				<Details />
+			</Service>
+		</Services>
+	</ServiceManager>
+	<TelephonyManager type="OrbisTel.Telephony.TelephonyManager">
+		<TelephonyHardware type="OrbisTel.Telephony.Emulator.WindowsHardware" name="Windows Hardware" assembly="OrbisTel.Telephony.Emulator, Version=1.0.1611.38088, Culture=neutral, PublicKeyToken=null">
+			<DisabledLines />
+			<FileReferenceList>
+				<FileReference name="OrbisTel.Telephony.Emulator.dll" version="1.0.1611.38088" folder="TelephonyHardware" />
+			</FileReferenceList>
+			<Details />
+		</TelephonyHardware>
+	</TelephonyManager>
+</Switch>

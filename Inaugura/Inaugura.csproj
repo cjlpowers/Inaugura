@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7868A321-48B1-4854-A365-3DB5BE40F75E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inaugura</RootNamespace>
+    <AssemblyName>Inaugura</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Inaugura.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Inaugura.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caching\Cache.cs" />
+    <Compile Include="Caching\WebCache.cs" />
+    <Compile Include="Key.cs" />
+    <Compile Include="Measurement\Vector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Person.cs" />
+    <Compile Include="Maps\Address.cs" />
+    <Compile Include="Maps\City.cs" />
+    <Compile Include="Data\DataException.cs" />
+    <Compile Include="Data\SqlDataStore.cs" />
+    <Compile Include="Drawing\ImageHelper.cs" />
+    <Compile Include="Maps\Locale.cs" />
+    <Compile Include="Maps\IGeocode.cs" />
+    <Compile Include="Measurement\Measurement.cs" />
+    <Compile Include="Measurement\Point.cs" />
+    <Compile Include="Measurement\Unit.cs" />
+    <Compile Include="Maps\Province.cs" />
+    <Compile Include="Maps\Country.cs" />
+    <Compile Include="Data\ConnectionException.cs" />
+    <Compile Include="Data\Inaugura.Designer.cs" />
+    <None Include="Data\Inaugura1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inaugura.xsd</DependentUpon>
+    </None>
+    <Compile Include="DetailDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailDlg.Designer.cs">
+      <DependentUpon>DetailDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Details.cs" />
+    <Compile Include="DetailsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailsEditor.cs" />
+    <Compile Include="Drawing\ScreenCapture.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Chart.cs" />
+    <Compile Include="Reports\HyperLink.cs" />
+    <Compile Include="Reports\Image.cs" />
+    <Compile Include="Reports\Paragraph.cs" />
+    <Compile Include="Reports\Report.cs" />
+    <Compile Include="Reports\ReportHtmlWriter.cs" />
+    <Compile Include="Reports\ReportSection.cs" />
+    <Compile Include="Reports\ReportSectionContainer.cs" />
+    <Compile Include="Security\Helper.cs" />
+    <Compile Include="Security\RijndaelCrypto.cs" />
+    <Compile Include="Security\Role.cs" />
+    <Compile Include="Security\RSACrypto.cs" />
+    <Compile Include="Security\SaltedHash.cs" />
+    <Compile Include="Security\SecurityException.cs" />
+    <Compile Include="Threading\Helper.cs" />
+    <Compile Include="Threading\ManagedThreadPool.cs" />
+    <Compile Include="Threading\ResourceMonitor.cs" />
+    <Compile Include="Validation.cs" />
+    <Compile Include="Web\Controls\ContentInserter.cs" />
+    <Compile Include="Web\Controls\ListRadioButton.cs">
+    </Compile>
+    <Compile Include="Web\HttpHandler.cs" />
+    <Compile Include="Web\Controls\TabBar\ClickableTab.cs" />
+    <Compile Include="Web\Controls\TabBar\CloseableTab.cs" />
+    <Compile Include="Web\Controls\TabBar\Div.cs" />
+    <Compile Include="Web\Controls\TabBar\HoverableTab.cs" />
+    <Compile Include="Web\Controls\TabBar\SelectableTab.cs" />
+    <Compile Include="Web\Controls\TabBar\Tab.cs" />
+    <Compile Include="Web\Controls\TabBar\TabBar.cs" />
+    <Compile Include="Web\Controls\TabBar\TabBarDesigner.cs" />
+    <Compile Include="Web\Controls\TabBar\TabBase.cs" />
+    <Compile Include="Web\Controls\TabBar\TabCollection.cs" />
+    <Compile Include="Web\Controls\TabBar\TestArrayList.cs" />
+    <Compile Include="Web\ImageHttpHandler.cs" />
+    <Compile Include="Windows\Forms\ConfigItemDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\GetInstanceDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\InstanceListItem.cs" />
+    <Compile Include="Xml\Helper.cs" />
+    <Compile Include="Xml\IXmlable.cs" />
+    <Compile Include="Xml\IXmlObject.cs" />
+    <Compile Include="Xml\IXmlStateReader.cs" />
+    <Compile Include="Xml\IXmlStateWriter.cs" />
+    <Compile Include="Xml\XmlException.cs" />
+    <Compile Include="Xml\XmlMissingException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DetailsDlg.resx">
+      <DependentUpon>DetailsDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailsEditor.resx">
+      <DependentUpon>DetailsEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ConfigItemDlg.resx">
+      <DependentUpon>ConfigItemDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\GetInstanceDlg.resx">
+      <DependentUpon>GetInstanceDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Data\Database.sql" />
+    <None Include="Data\Inaugura.xsc">
+      <DependentUpon>Inaugura.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Inaugura.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inaugura1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Inaugura.xss">
+      <DependentUpon>Inaugura.xsd</DependentUpon>
+    </None>
+    <None Include="Data\RealLeads.xsc" />
+    <None Include="Data\RealLeads.xss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web\Controls\TabBar\TabBar.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

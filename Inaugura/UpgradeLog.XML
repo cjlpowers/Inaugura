@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?>
+<UpgradeLog>
+<Properties><Property Name="Solution" Value="Inaugura">
+</Property><Property Name="Solution File" Value="F:\DEV\Inaugura\Inaugura\Inaugura.sln">
+</Property><Property Name="Date" Value="Monday, January 17, 2005">
+</Property><Property Name="Time" Value="19:46:46 PM">
+</Property></Properties><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Migration Started on project file MenuCSProjects.csproj.">
+</Event><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Removed file bin\MenuCSProjects.dll.">
+</Event><Event ErrorLevel="2" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Failed removing file bin\MenuCSProjects.pdb.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute Inherits.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute AutoEventWireup.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute Codebehind.">
+</Event><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Succeeded parsing the file default.aspx.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute Codebehind.">
+</Event><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Succeeded parsing the file global.asax.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute Inherits.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute AutoEventWireup.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute Codebehind.">
+</Event><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Succeeded parsing the file adddisableitems\default.aspx.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute TargetSchema.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute Inherits.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute Codebehind.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute AutoEventWireup.">
+</Event><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Succeeded parsing the file adddisableitems\menu.ascx.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute Inherits.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute AutoEventWireup.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute Codebehind.">
+</Event><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Succeeded parsing the file programmaticbinding\default.aspx.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute TargetSchema.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute Inherits.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute Codebehind.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute AutoEventWireup.">
+</Event><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Succeeded parsing the file programmaticbinding\menu.ascx.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute Inherits.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute AutoEventWireup.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute Codebehind.">
+</Event><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Succeeded parsing the file xmlstringbinding\default.aspx.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute TargetSchema.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute Inherits.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute Codebehind.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Deleting attribute AutoEventWireup.">
+</Event><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Succeeded parsing the file xmlstringbinding\menu.ascx.">
+</Event><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Succeeded parsing the file global.asax.cs.">
+</Event><Event ErrorLevel="1" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Added folder code\ to the web.">
+</Event><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Moving file global.asax.cs to the code\ directory.">
+</Event><Event ErrorLevel="2" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Failed parsing the file adddisableitems\menu.ascx.vb.">
+</Event><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Succeeded parsing the file assemblyinfo.cs.">
+</Event><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Moving file assemblyinfo.cs to the code\ directory.">
+</Event><Event ErrorLevel="2" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Failed parsing the file programmaticbinding\menu.ascx.vb.">
+</Event><Event ErrorLevel="2" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Unable to migrate user settings in C:\Documents and Settings\Chris Powers\VSWebCache\INAUGURA_DEV\telerik\r.a.d.menu2.8\SampleProjects\CSharp\MenuCSProjects.csproj.user.">
+</Event><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="WebMigration" Description="Removed file MenuCSProjects.csproj.">
+</Event><Event ErrorLevel="0" Project="MenuCSProjects.csproj" Source="C:\Program Files\telerik\r.a.d.menu2.8\SampleProjects\CSharp\MenuCSProjects.csproj" Description="Project upgraded successfully">
+</Event><Event ErrorLevel="3" Project="MenuCSProjects.csproj" Source="C:\Program Files\telerik\r.a.d.menu2.8\SampleProjects\CSharp\MenuCSProjects.csproj" Description="Upgraded">
+</Event></UpgradeLog>

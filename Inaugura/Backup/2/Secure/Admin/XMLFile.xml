@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Locale id="2902079b-b356-4f23-a019-939f700f6a18" name="University of Waterloo" localeType="4" radius="5">
+	<Address city="Waterloo" stateProv="Ontario" country="Canada" latitude="43.481788" longitude="-80.511618" countryID="f0358332-08af-4060-962d-a2c88459378c" stateProvID="0231388f-9f05-4e4e-ba88-88230a36fd59" cityID="efd78186-1667-4054-82c4-f29b59e96f6b" />
+</Locale>
